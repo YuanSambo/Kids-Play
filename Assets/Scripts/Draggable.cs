@@ -42,6 +42,12 @@ public class Draggable : MonoBehaviour
                 transform.position = Vector3.Lerp(transform.position, _movementDestination.Value,
                     _movementTime * Time.fixedDeltaTime);
             }
+
+            
+        }else if (transform.position != StartingPosition)
+        {
+            transform.position = Vector3.Lerp(transform.position, StartingPosition,
+                _movementTime * Time.fixedDeltaTime);
         }
     }
 
