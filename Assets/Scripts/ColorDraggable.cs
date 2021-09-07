@@ -1,32 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Transactions;
 using UnityEngine;
 
 public enum Color
 {
     Blue,
     Red,
-    Green
+    Green,
+    Yellow,
+    Count,
 }
-public class ColorDraggable :Draggable
+
+public class ColorDraggable : Draggable
 {
     public Color color;
-    private new void OnTriggerEnter2D(Collider2D other)
+
+    private void OnTriggerEnter2D(Collider2D other)
+
     {
-        base.OnTriggerEnter2D(other);
-
-        var containerColor = other.gameObject.GetComponent<ColorContainer>().color;
-
-        
-        if (color.Equals(containerColor))
+        var container = other.gameObject.GetComponent<ColorContainer>();
+        if (container != null)
         {
-            GameManager.Instance.CorrectAnswer();
-            _movementDestination = other.transform.position;
-            Destroy(gameObject);
+            var containerColor = container.color;
+            if (color.Equals(containerColor))
+            {
+                GameManager.Instance.CorrectAnswer();
+                MovementDestination = other.transform.position;
+                Destroy(gameObject);
+            }
+            else
+            {
+                MovementDestination = StartingPosition;
+            }
         }
-        else
-        {
-            _movementDestination = StartingPosition;
-        }
+
+
+       
     }
 }

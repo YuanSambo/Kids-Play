@@ -12,8 +12,8 @@ public class Draggable : MonoBehaviour
     private Collider2D _collider;
     private DragController _dragController;
     private float _movementTime = 15f;
-    
-    protected Vector3? _movementDestination;
+
+    protected Vector3? MovementDestination;
 
     private void Start()
     {
@@ -24,45 +24,32 @@ public class Draggable : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_movementDestination.HasValue)
+
+
+        if (MovementDestination.HasValue)
         {
             if (IsDragging)
             {
-                _movementDestination = null;
+                MovementDestination = null;
                 return;
             }
-
-            if (transform.position == _movementDestination)
+        
+            if (transform.position == MovementDestination)
             {
                 gameObject.layer = Layer.Default;
-                _movementDestination = null;
+                MovementDestination = null;
             }
             else
             {
-                transform.position = Vector3.Lerp(transform.position, _movementDestination.Value,
+                transform.position = Vector3.Lerp(transform.position, MovementDestination.Value,
                     _movementTime * Time.fixedDeltaTime);
             }
-
             
-        }else if (transform.position != StartingPosition)
-        {
-            transform.position = Vector3.Lerp(transform.position, StartingPosition,
-                _movementTime * Time.fixedDeltaTime);
+         
         }
+        
+        
+        
     }
 
-    protected void OnTriggerEnter2D(Collider2D other)
-    {
-        Draggable collidedDraggable = other.GetComponent<Draggable>();
-
-        if (collidedDraggable != null && _dragController.LastDragged.gameObject == gameObject)
-        {
-            ColliderDistance2D colliderDistance2D = other.Distance(_collider);
-            Vector3 diff = new Vector3(colliderDistance2D.normal.x, colliderDistance2D.normal.y) *
-                           colliderDistance2D.distance;
-            transform.position -= diff;
-        }
-
-      
-    }
 }

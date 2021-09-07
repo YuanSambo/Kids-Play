@@ -3,6 +3,7 @@ using UnityEngine;
 public class DragController : MonoBehaviour
 {
     public Draggable LastDragged => _lastDragged;
+    
     private bool _isDragActive = false;
     private Vector2 _screenPosition;
     private Vector3 _worldPosition;
@@ -28,21 +29,7 @@ public class DragController : MonoBehaviour
 
 
         // Get the screen position of the cursor / finger
-        if (Input.GetMouseButton(0))
-        {
-            Vector3 mousePosition = Input.mousePosition;
-            _screenPosition = new Vector2(mousePosition.x, mousePosition.y);
-        }
-        else if (Input.touchCount > 0)
-        {
-            _screenPosition = Input.GetTouch(0).position;
-        }
-        else
-        {
-            return;
-        }
-
-        _worldPosition = _camera.ScreenToWorldPoint(_screenPosition);
+        _worldPosition = GetTouchPosition();
 
 
         if (_isDragActive)
@@ -84,5 +71,23 @@ public class DragController : MonoBehaviour
     {
         _isDragActive = _lastDragged.IsDragging = isDragging;
         _lastDragged.gameObject.layer = isDragging ? Layer.Dragging : Layer.Default;
+    }
+    
+    private Vector3 GetTouchPosition()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            Vector3 mousePosition = Input.mousePosition;
+            _screenPosition = new Vector2(mousePosition.x, mousePosition.y);
+            return _camera.ScreenToWorldPoint(_screenPosition);
+        }
+
+        if (Input.touchCount > 0)
+        {
+            _screenPosition = Input.GetTouch(0).position;
+            return _camera.ScreenToWorldPoint(_screenPosition);
+        }
+        
+        return new Vector3(3,3,3);
     }
 }
