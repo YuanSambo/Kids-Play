@@ -27,7 +27,7 @@ public class BoxPanel : MonoBehaviour
     {
         ColorBoxes.Shuffle(5);
 
-        for (int i = 0; i < ColorBoxes.Count; i++)
+        for (int i = 0; i < 3; i++)
         {
             var obj =Instantiate(ColorBoxes[i], new Vector2(Positions[i].position.x, Positions[i].position.y), Quaternion.identity);
             obj.transform.SetParent(transform);
