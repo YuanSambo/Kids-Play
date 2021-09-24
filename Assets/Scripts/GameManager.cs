@@ -8,12 +8,18 @@ using UnityEngine.Events;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    private int _correctAnswer = 0;
-    private int _wrongAnswer = 0;
+    private int _gameScore;
+
+    private int _roundCorrect;
+    private int _allCorrect;
+    private int _wrongAnswer;
 
 
     private void Awake()
     {
+        _allCorrect = PlayerPrefs.GetInt("CorrectAnswers");
+        _wrongAnswer = PlayerPrefs.GetInt("WrongAnswers");
+        
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -24,12 +30,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [SerializeField] private UnityEvent onStart;
+
+    private void Start()
+    {
+        onStart?.Invoke();
+    }
 
     [SerializeField] private UnityEvent onCorrectAnswer;
 
     public void CorrectAnswer()
     {
-        _correctAnswer++;
+        _roundCorrect++;
+        PlayerPrefs.SetInt("CorrectAnswers", ++_allCorrect);
         onCorrectAnswer?.Invoke();
     }
 
@@ -37,29 +50,30 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (_correctAnswer >= 3)
+        if (_roundCorrect >= 3)
         {
-            Win();
+            RoundWin();
+            _gameScore++;
+            print(_gameScore);
         }
     }
 
     public void WrongAnswer()
     {
-        _wrongAnswer++;
+        PlayerPrefs.SetInt("WrongAnswers", ++_wrongAnswer);
         onWrongAnswer?.Invoke();
     }
 
-    [SerializeField] private UnityEvent onWin;
+    [SerializeField] private UnityEvent onRoundWin;
 
-    private void Win()
+    private void RoundWin()
     {
-        onWin?.Invoke();
+        onRoundWin?.Invoke();
         Reset();
     }
 
     private void Reset()
     {
-        _correctAnswer = 0;
-        _wrongAnswer = 0;
+        _roundCorrect = 0;
     }
 }

@@ -1,15 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
+using System.Security.Cryptography;
 using Unity.Mathematics;
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
 using Random = UnityEngine.Random;
+using Vector2 = UnityEngine.Vector2;
 
 public class BoxPanel : MonoBehaviour
 {
+    [Serializable]
+    public struct Pair
+    {
+        public GameObject box;
+        public GameObject toy;
+    }
 
-    public List<GameObject> ColorBoxes;
-    public List<Transform> Positions;
-    
+    public Pair[] pairs;
+
+    public List<Transform> BoxSpawnPositions;
+    public List<Transform> ToySpawnPositions;
+
 
     private Animator _animator;
 
@@ -18,32 +31,46 @@ public class BoxPanel : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    public void RemoveBoxes()
+    
+    public void GenerateRandomBoxes()
     {
-        StartCoroutine(RemoveCoroutine());
+      
+        pairs.Shuffle(10);
+        for (int i = 0; i < 3; i++)
+        {
+            var box = Instantiate(pairs[i].box, BoxSpawnPositions[i].position,Quaternion.identity);
+            box.transform.SetParent(transform);
+
+            
+        }
+        
+        ToySpawnPositions.Shuffle(10);
+        for (int i = 0; i < 3; i++)
+        {
+            var toy = Instantiate(pairs[i].toy, ToySpawnPositions[i].position,
+                Quaternion.identity);
+            toy.transform.SetParent(transform);
+        
+            
+        }
     }
 
-    private void GenerateRandomBoxes()
+    public void DestroyBoxes()
     {
-        ColorBoxes.Shuffle(5);
+        StartCoroutine(DestroyBoxesCoroutine());
+    }
+    private IEnumerator DestroyBoxesCoroutine()
+    {
+        var boxes = GameObject.FindGameObjectsWithTag("DropValid");
 
         for (int i = 0; i < 3; i++)
         {
-            var obj =Instantiate(ColorBoxes[i], new Vector2(Positions[i].position.x, Positions[i].position.y), Quaternion.identity);
-            obj.transform.SetParent(transform);
+            Destroy(boxes[i]);
+            yield return new WaitForSeconds(0f);
         }
+        
+        
     }
 
-    private IEnumerator RemoveCoroutine()
-    {
-        _animator.SetTrigger("SlideUpTrigger");
-        yield return new WaitForSeconds(1f);
-        var boxes = GameObject.FindGameObjectsWithTag("DropValid");
-        foreach (var box in boxes)
-        {
-            Destroy(box);
-        }
-        GenerateRandomBoxes();
-        _animator.SetTrigger("SlideDownTrigger");
-    }
+   
 }

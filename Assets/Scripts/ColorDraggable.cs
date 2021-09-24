@@ -9,6 +9,8 @@ public enum Color
     Red,
     Green,
     Yellow,
+    Violet,
+    Orange,
     Count,
 }
 
@@ -23,7 +25,7 @@ public class ColorDraggable : Draggable
         if (container != null)
         {
             var containerColor = container.color;
-            if (color.Equals(containerColor))
+            if (color.Equals(containerColor) && MovementDestination != StartingPosition)
             {
                 GameManager.Instance.CorrectAnswer();
                 MovementDestination = other.transform.position;
@@ -31,6 +33,7 @@ public class ColorDraggable : Draggable
             }
             else
             {
+                GameManager.Instance.WrongAnswer();
                 MovementDestination = StartingPosition;
             }
         }

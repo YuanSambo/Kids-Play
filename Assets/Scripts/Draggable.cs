@@ -24,8 +24,6 @@ public class Draggable : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-
         if (MovementDestination.HasValue)
         {
             if (IsDragging)
@@ -33,23 +31,21 @@ public class Draggable : MonoBehaviour
                 MovementDestination = null;
                 return;
             }
-        
+
             if (transform.position == MovementDestination)
             {
                 gameObject.layer = Layer.Default;
                 MovementDestination = null;
             }
+
             else
             {
+                gameObject.layer = Layer.Dragging;
                 transform.position = Vector3.Lerp(transform.position, MovementDestination.Value,
                     _movementTime * Time.fixedDeltaTime);
             }
-            
-         
         }
-        
-        
-        
+       
     }
-
 }
+
