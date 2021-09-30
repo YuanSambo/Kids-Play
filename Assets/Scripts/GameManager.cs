@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Android;
 using UnityEngine.Events;
 
-public class GameManager : MonoBehaviour
+public  class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     private int _gameScore;
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private UnityEvent onWrongAnswer;
 
-    private void Update()
+    protected void Update()
     {
         if (_roundCorrect >= 3)
         {

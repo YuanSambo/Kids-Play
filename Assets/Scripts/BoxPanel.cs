@@ -38,9 +38,7 @@ public class BoxPanel : MonoBehaviour
         pairs.Shuffle(10);
         for (int i = 0; i < 3; i++)
         {
-            var box = Instantiate(pairs[i].box, BoxSpawnPositions[i].position,Quaternion.identity);
-            box.transform.SetParent(transform);
-
+            var box = Instantiate(pairs[i].box, BoxSpawnPositions[i].position,Quaternion.identity,transform);
             
         }
         
