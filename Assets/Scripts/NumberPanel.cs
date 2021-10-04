@@ -16,7 +16,7 @@ public class NumberPanel : MonoBehaviour
     {
         var num = (int)CountingManager.Instance.Count;
         Instantiate(Numbers[num], transform.position, Quaternion.identity, transform);
-
+        
     }
     
 }

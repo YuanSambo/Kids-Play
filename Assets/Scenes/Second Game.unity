@@ -310,7 +310,55 @@ MonoBehaviour:
         m_CallState: 2
   onCorrectAnswer:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489194823}
+        m_TargetAssemblyTypeName: CountingManager, Assembly-CSharp
+        m_MethodName: GenerateRandomNumber
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 502695054}
+        m_TargetAssemblyTypeName: NumberPanel, Assembly-CSharp
+        m_MethodName: UpdateNumber
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 504378876}
+        m_TargetAssemblyTypeName: EggPanel, Assembly-CSharp
+        m_MethodName: GenerateRandomEggs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 502695054}
+        m_TargetAssemblyTypeName: NumberPanel, Assembly-CSharp
+        m_MethodName: DestroyNumberDisplay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onWrongAnswer:
     m_PersistentCalls:
       m_Calls: []
@@ -432,7 +480,7 @@ GameObject:
   - component: {fileID: 504378875}
   - component: {fileID: 504378876}
   m_Layer: 5
-  m_Name: ' Egg Panel'
+  m_Name: Egg Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -26,11 +26,5 @@ public class CountingManager : MonoBehaviour
         Count = num;
     }
 
-    private void Update()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            SceneManager.LoadScene("Second Game");
-        }
-    }
+    
 }

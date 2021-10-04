@@ -24,7 +24,7 @@ public class Eggs : MonoBehaviour
     {
         if (CountingManager.Instance.Count == eggCount)
         {
-            print("Correct");
+            GameManager.Instance.CorrectAnswer();
         }
         else
         {
