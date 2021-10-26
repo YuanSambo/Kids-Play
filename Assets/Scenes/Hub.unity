@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 189437137}
   - component: {fileID: 189437136}
   m_Layer: 5
-  m_Name: First Game (1)
+  m_Name: Second Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,7 +310,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 189437137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 324392167}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: SecondLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &189437137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,7 +603,7 @@ GameObject:
   - component: {fileID: 1034014395}
   - component: {fileID: 1034014394}
   m_Layer: 5
-  m_Name: First Game (2)
+  m_Name: Third Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1481,7 +1493,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1827645524}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 324392167}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: FourthLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1827645524
 MonoBehaviour:
   m_ObjectHideFlags: 0

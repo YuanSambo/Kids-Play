@@ -1,48 +1,42 @@
 {
     "m_SelectedDeviceId": "a29ccec1",
     "m_SelectedPackage": {
-        "deviceId": "a29ccec1",
-        "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 23081,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "a29ccec1",
-            "name": "com.unity3d.mobileremote",
-            "processId": 12046,
-            "exited": true
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.instagram.android",
-            "processId": 16627,
-            "exited": true
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 3960,
-            "exited": true
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 17889,
-            "exited": false
-        },
-        {
-            "deviceId": "a29ccec1",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 18616,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "a29ccec1",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 23081,
-            "exited": false
+            "exited": true
+        },
+        {
+            "deviceId": "a29ccec1",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 4639,
+            "exited": true
+        },
+        {
+            "deviceId": "a29ccec1",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 5327,
+            "exited": true
+        },
+        {
+            "deviceId": "a29ccec1",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 7467,
+            "exited": true
         }
     ],
     "m_Tags": {

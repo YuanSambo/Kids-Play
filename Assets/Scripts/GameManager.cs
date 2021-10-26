@@ -56,6 +56,7 @@ public  class GameManager : MonoBehaviour
             _gameScore++;
             print(_gameScore);
         }
+        
     }
 
     public void WrongAnswer()

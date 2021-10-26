@@ -26,4 +26,8 @@ public class LevelManager : MonoBehaviour
    {
       SceneManager.LoadScene(3);
    }
+   public void FourthLevel()
+   {
+      SceneManager.LoadScene(6);
+   }
 }

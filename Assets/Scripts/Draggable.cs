@@ -31,7 +31,7 @@ public class Draggable : MonoBehaviour
                 MovementDestination = null;
                 return;
             }
-
+            
             if (transform.position == MovementDestination)
             {
                 gameObject.layer = Layer.Default;
@@ -44,8 +44,10 @@ public class Draggable : MonoBehaviour
                 transform.position = Vector3.Lerp(transform.position, MovementDestination.Value,
                     _movementTime * Time.fixedDeltaTime);
             }
+
+            return;
         }
-       
+        
     }
 }
 
