@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7617490815713457554}
   - component: {fileID: 7617490815713457553}
   m_Layer: 0
-  m_Name: Orange
+  m_Name: Red Toy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 43519e2aa1f11de449731b60bf1c4fa5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d167e2a77595d984d93397aa8a51af17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 6.265
+  m_Radius: 5.065
 --- !u!50 &7617490815713457554
 Rigidbody2D:
   serializedVersion: 4
@@ -111,16 +111,16 @@ Rigidbody2D:
   m_GameObject: {fileID: 7617490815713457549}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &7617490815713457553
 MonoBehaviour:
@@ -136,4 +136,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDragging: 0
   StartingPosition: {x: 0, y: 0, z: 0}
-  color: 5
+  color: 1

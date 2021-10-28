@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Security.Cryptography;
 using Unity.Mathematics;
+using UnityEditorInternal;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
 using Random = UnityEngine.Random;
@@ -32,27 +33,34 @@ public class BoxPanel : MonoBehaviour
     }
 
     
-    public void GenerateRandomBoxes()
+    private IEnumerator GenerateRandomBoxes()
     {
+        while (true)
+        {
+            pairs.Shuffle(10);
+            for (int i = 0; i < 3; i++)
+            {
+                Instantiate(pairs[i].box, BoxSpawnPositions[i].position,Quaternion.identity,transform);
+                yield return new WaitForSeconds(1f);
+
+            }
+
+            yield break;
+        }
       
-        pairs.Shuffle(10);
-        for (int i = 0; i < 3; i++)
-        {
-            var box = Instantiate(pairs[i].box, BoxSpawnPositions[i].position,Quaternion.identity,transform);
-            
-        }
         
-        ToySpawnPositions.Shuffle(10);
-        for (int i = 0; i < 3; i++)
-        {
-            var toy = Instantiate(pairs[i].toy, ToySpawnPositions[i].position,
-                Quaternion.identity);
-            toy.transform.SetParent(transform);
-        
-            
-        }
     }
 
+    public void StartGenerate()
+    {
+        StartCoroutine(GenerateRandomBoxes());
+        ToySpawnPositions.Shuffle(20);
+        for (int i = 0; i < 3; i++)
+        {
+            Instantiate(pairs[i].toy, ToySpawnPositions[i].position,
+                Quaternion.identity,transform);
+        }
+    }
     public void DestroyBoxes()
     {
         StartCoroutine(DestroyBoxesCoroutine());

@@ -17,7 +17,11 @@ public class DragController : MonoBehaviour
 
     private void Update()
     {
-        // Check if currently dragging objects
+        
+        // Get the screen position of the cursor / finger
+        _worldPosition = GetTouchPosition();
+
+
         if (_isDragActive)
         {
             if (Input.GetMouseButtonUp(0) || (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended))
@@ -25,16 +29,9 @@ public class DragController : MonoBehaviour
                 Drop();
                 return;
             }
-        }
-
-
-        // Get the screen position of the cursor / finger
-        _worldPosition = GetTouchPosition();
-
-
-        if (_isDragActive)
-        {
+            
             Drag();
+            
         }
         else
         {
@@ -49,6 +46,7 @@ public class DragController : MonoBehaviour
                     InitDrag();
                 }
             }
+            
         }
     }
 
@@ -88,6 +86,6 @@ public class DragController : MonoBehaviour
             return _camera.ScreenToWorldPoint(_screenPosition);
         }
         
-        return new Vector3(3,3,3);
+        return new Vector3(100,100,100);
     }
 }

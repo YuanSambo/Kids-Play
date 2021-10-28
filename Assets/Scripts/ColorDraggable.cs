@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Transactions;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public enum Color
 {
@@ -28,7 +30,8 @@ public class ColorDraggable : Draggable
             if (color.Equals(containerColor) && MovementDestination != StartingPosition)
             {
                 GameManager.Instance.CorrectAnswer();
-                MovementDestination = other.transform.position;
+                container.PlayConfetti();
+                MovementDestination = null;
                 Destroy(gameObject);
             }
             else
@@ -37,8 +40,6 @@ public class ColorDraggable : Draggable
                 MovementDestination = StartingPosition;
             }
         }
-
-
-       
     }
+    
 }

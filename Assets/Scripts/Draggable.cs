@@ -9,16 +9,13 @@ public class Draggable : MonoBehaviour
     [HideInInspector] public bool IsDragging;
     [HideInInspector] public Vector3 StartingPosition;
 
-    private Collider2D _collider;
-    private DragController _dragController;
-    private float _movementTime = 15f;
+
+    private float _movementTime = 3f;
 
     protected Vector3? MovementDestination;
 
     private void Start()
     {
-        _collider = GetComponent<Collider2D>();
-        _dragController = FindObjectOfType<DragController>();
         StartingPosition = transform.position;
     }
 
@@ -45,8 +42,13 @@ public class Draggable : MonoBehaviour
                     _movementTime * Time.fixedDeltaTime);
             }
 
-            return;
         }
+        else
+        {
+            transform.position = Vector3.Lerp(transform.position, StartingPosition,
+                _movementTime * Time.fixedDeltaTime);
+        }
+        
         
     }
 }
