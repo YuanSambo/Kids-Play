@@ -1,14 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
-using System.Security.Cryptography;
-using Unity.Mathematics;
-using UnityEditorInternal;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
-using Random = UnityEngine.Random;
-using Vector2 = UnityEngine.Vector2;
 
 public class BoxPanel : MonoBehaviour
 {
@@ -33,7 +27,7 @@ public class BoxPanel : MonoBehaviour
     }
 
     
-    private IEnumerator GenerateRandomBoxes()
+    private IEnumerator SpawnBoxesCoroutine()
     {
         while (true)
         {
@@ -51,9 +45,9 @@ public class BoxPanel : MonoBehaviour
         
     }
 
-    public void StartGenerate()
+    public void StartSpawnBoxes()
     {
-        StartCoroutine(GenerateRandomBoxes());
+        StartCoroutine(SpawnBoxesCoroutine());
         ToySpawnPositions.Shuffle(20);
         for (int i = 0; i < 3; i++)
         {
@@ -61,20 +55,20 @@ public class BoxPanel : MonoBehaviour
                 Quaternion.identity,transform);
         }
     }
-    public void DestroyBoxes()
+    public void NewRoundBoxes()
     {
-        StartCoroutine(DestroyBoxesCoroutine());
+        StartCoroutine(NewRoundBoxesCoroutine());
     }
-    private IEnumerator DestroyBoxesCoroutine()
+    private IEnumerator NewRoundBoxesCoroutine()
     {
         var boxes = GameObject.FindGameObjectsWithTag("DropValid");
 
+        yield return new WaitForSeconds(1.5f);
         for (int i = 0; i < 3; i++)
         {
             Destroy(boxes[i]);
-            yield return new WaitForSeconds(0f);
         }
-        
+        StartSpawnBoxes();
         
     }
 
