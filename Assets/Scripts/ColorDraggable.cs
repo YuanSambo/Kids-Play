@@ -29,10 +29,9 @@ public class ColorDraggable : Draggable
             var containerColor = container.color;
             if (color.Equals(containerColor) && MovementDestination != StartingPosition)
             {
+                Destroy(gameObject);
                 GameManager.Instance.CorrectAnswer();
                 container.PlayConfetti();
-                MovementDestination = null;
-                Destroy(gameObject);
             }
             else
             {
