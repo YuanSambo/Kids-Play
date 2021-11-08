@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public  class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public int rounds = 3;
     private int _gameScore;
 
     private int _roundCorrect;
@@ -50,11 +51,10 @@ public  class GameManager : MonoBehaviour
 
     protected void Update()
     {
-        if (_roundCorrect >= 3)
+        if (_roundCorrect >= rounds)
         {
             RoundWin();
             _gameScore++;
-            print(_gameScore);
         }
         
     }

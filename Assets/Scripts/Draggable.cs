@@ -29,11 +29,13 @@ public class Draggable : MonoBehaviour
                 return;
             }
             
-            if (transform.position == MovementDestination)
+           
+            if (transform.position.Equals(MovementDestination))
             {
                 gameObject.layer = Layer.Default;
                 MovementDestination = null;
             }
+            
 
             else
             {
