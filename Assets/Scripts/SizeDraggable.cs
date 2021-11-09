@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+
 public enum Sizes
 {
     First,
@@ -24,6 +26,7 @@ public class SizeDraggable : Draggable
             {
                 GameManager.Instance.CorrectAnswer();
                 MovementDestination = other.transform.position;
+                GetComponent<BoxCollider2D>().enabled = false;
             }
             else
             {

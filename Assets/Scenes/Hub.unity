@@ -313,7 +313,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 324392167}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: SecondLevel
+        m_MethodName: SecondGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -671,7 +671,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1034014395}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 324392167}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: ThirdGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1034014395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,7 +992,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 324392167}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: FirstLevel
+        m_MethodName: FirstGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1305,7 +1317,7 @@ GameObject:
   - component: {fileID: 1825244638}
   - component: {fileID: 1825244637}
   m_Layer: 5
-  m_Name: First Game (5)
+  m_Name: Sixth Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1373,7 +1385,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1825244638}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 324392167}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: SixthGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1825244638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1425,7 +1449,7 @@ GameObject:
   - component: {fileID: 1827645524}
   - component: {fileID: 1827645523}
   m_Layer: 5
-  m_Name: First Game (4)
+  m_Name: Fifth Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1496,7 +1520,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 324392167}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: FourthLevel
+        m_MethodName: FifthGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

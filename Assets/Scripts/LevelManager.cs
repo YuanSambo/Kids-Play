@@ -17,16 +17,26 @@ public class LevelManager : MonoBehaviour
    {
       SceneManager.LoadScene(4);
    }
-   public void FirstLevel()
+   public void FirstGame()
    {
       SceneManager.LoadScene(2);
    }
 
-   public void SecondLevel()
+   public void SecondGame()
    {
       SceneManager.LoadScene(3);
    }
-   public void FourthLevel()
+
+   public void ThirdGame()
+   {
+      SceneManager.LoadScene(4);
+   }
+   public void FifthGame()
+   {
+      SceneManager.LoadScene(5);
+   }
+
+   public void SixthGame()
    {
       SceneManager.LoadScene(6);
    }

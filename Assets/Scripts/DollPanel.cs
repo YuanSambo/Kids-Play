@@ -7,10 +7,10 @@ using UnityEngine;
 public class DollPanel : MonoBehaviour
 {
     public List<GameObject> Dolls;
-    private int counter = 0;
+    public int counter = 0;
 
 
-    private void Start()
+    private void Awake()
     {
         Shuffle();
     }
@@ -19,6 +19,7 @@ public class DollPanel : MonoBehaviour
     {
         counter = 0;
         Dolls.Shuffle(10);
+
     }
 
 
@@ -40,6 +41,7 @@ public class DollPanel : MonoBehaviour
         DestroyDollsCoroutine();
         Shuffle();
         SpawnDoll();
+        
     }
 
     private void DestroyDollsCoroutine()
