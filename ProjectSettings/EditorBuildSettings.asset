@@ -12,19 +12,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Hub.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/First Game.unity
+    path: Assets/Scenes/Game_Color.unity
     guid: 13009880b6daa5c429f9fcf8ff1bd089
   - enabled: 1
-    path: Assets/Scenes/Second Game.unity
+    path: Assets/Scenes/Game_Counting.unity
     guid: 8f3fe61ceadf0414185d573537338155
   - enabled: 1
-    path: Assets/Scenes/Third Game.unity
+    path: Assets/Scenes/Game_Shapes.unity
     guid: f15a08e727ad7d04897acd8ddeb256fc
   - enabled: 1
-    path: Assets/Scenes/FifthGame.unity
+    path: Assets/Scenes/Game_Difference.unity
     guid: 9653991a880219a41914c73e85290512
   - enabled: 1
-    path: Assets/Scenes/SIxth Game.unity
+    path: Assets/Scenes/Game_Size.unity
     guid: ebb53242726afb84a847ebca66b6bbb1
   - enabled: 1
     path: Assets/Scenes/ParentsDashboard.unity

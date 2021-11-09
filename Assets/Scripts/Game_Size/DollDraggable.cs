@@ -11,14 +11,14 @@ public enum Sizes
     Fourth,
     Count,
 }
-public class SizeDraggable : Draggable
+public class DollDraggable : Draggable
 {
     public Sizes size;
     
     private void OnTriggerEnter2D(Collider2D other)
 
     {
-        var container = other.gameObject.GetComponent<SizeContainer>();
+        var container = other.gameObject.GetComponent<DollContainer>();
         if (container != null)
         {
             var containerSize = container.size;
