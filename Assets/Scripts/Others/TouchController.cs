@@ -14,26 +14,18 @@ public class TouchController : MonoBehaviour
         {
             Vector3 mousePosition = Input.mousePosition;
             _screenPosition = new Vector2(mousePosition.x, mousePosition.y);
-        }
-        else if (Input.touchCount > 0)
-        {
-            _screenPosition = Input.GetTouch(0).position;
-            worldPosition = Camera.current.ScreenToWorldPoint(_screenPosition);
-            
-            
+            worldPosition = Camera.main.ScreenToWorldPoint(_screenPosition);
+
             RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
             if (hit.collider != null)
             {
-                hit.transform.localScale = new Vector3(3, 3, 3);
+                Destroy(hit.transform.gameObject);
+
             }
-        }
-        else
-        {
-            return;
+
+
+
         }
 
-        
-      
-        
     }
 }
