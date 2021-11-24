@@ -25,6 +25,7 @@ public class DollDraggable : Draggable
             if (size.Equals(containerSize) && MovementDestination != StartingPosition)
             {
                 GameManager.Instance.CorrectAnswer();
+                container.PlayConfetti();
                 MovementDestination = other.transform.position;
                 GetComponent<BoxCollider2D>().enabled = false;
             }

@@ -333,6 +333,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05686db4294dd9840addd55079c4d9af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rounds: 3
+  playerPrefCorrect: ColorGameCorrect
+  playerPrefWrong: ColorGameWrong
   onStart:
     m_PersistentCalls:
       m_Calls:

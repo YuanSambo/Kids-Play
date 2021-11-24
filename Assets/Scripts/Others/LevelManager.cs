@@ -11,11 +11,11 @@ public class LevelManager : MonoBehaviour
 
    public void StickerBoard()
    {
-      SceneManager.LoadScene(5);
+      SceneManager.LoadScene(8);
    }
    public void ParentsDashboard()
    {
-      SceneManager.LoadScene(4);
+      SceneManager.LoadScene(7);
    }
    public void FirstGame()
    {

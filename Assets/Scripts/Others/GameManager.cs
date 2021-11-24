@@ -9,6 +9,8 @@ public  class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public int rounds = 3;
+    public string playerPrefCorrect;
+    public string playerPrefWrong;
     private int _gameScore;
 
     private int _roundCorrect;
@@ -18,8 +20,8 @@ public  class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        _allCorrect = PlayerPrefs.GetInt("CorrectAnswers");
-        _wrongAnswer = PlayerPrefs.GetInt("WrongAnswers");
+        _allCorrect = PlayerPrefs.GetInt(playerPrefCorrect);
+        _wrongAnswer = PlayerPrefs.GetInt(playerPrefWrong);
         
         if (Instance != null && Instance != this)
         {
@@ -43,7 +45,7 @@ public  class GameManager : MonoBehaviour
     public void CorrectAnswer()
     {
         _roundCorrect++;
-        PlayerPrefs.SetInt("CorrectAnswers", ++_allCorrect);
+        PlayerPrefs.SetInt(playerPrefCorrect, ++_allCorrect);
         onCorrectAnswer?.Invoke();
     }
 
@@ -51,6 +53,7 @@ public  class GameManager : MonoBehaviour
 
     protected void Update()
     {
+        print(Math.Round(Time.time));
         if (_roundCorrect >= rounds)
         {
             RoundWin();
@@ -61,7 +64,7 @@ public  class GameManager : MonoBehaviour
 
     public void WrongAnswer()
     {
-        PlayerPrefs.SetInt("WrongAnswers", ++_wrongAnswer);
+        PlayerPrefs.SetInt(playerPrefWrong, ++_wrongAnswer);
         onWrongAnswer?.Invoke();
     }
 
