@@ -9,6 +9,7 @@ using Vector2 = UnityEngine.Vector2;
 
 public class BalloonSpawner : MonoBehaviour
 {
+    public float spawnSpeed;
     public List<GameObject> balloons;
     public List<Transform> spawnPositions;
     private int ctr = 0;
@@ -25,11 +26,10 @@ public class BalloonSpawner : MonoBehaviour
         {
             if (ctr >= balloons.Count) ctr = 0;
             var index = Random.Range(0, balloons.Count);
-            // var index2 = Random.Range(0, spawnPositions.Count);
             var obj = Instantiate(balloons[index], spawnPositions[ctr].position, Quaternion.identity);
             obj.GetComponent<Rigidbody2D>().velocity = Vector2.up;
             ctr++;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(spawnSpeed);
         }
 
         // ReSharper disable once IteratorNeverReturn

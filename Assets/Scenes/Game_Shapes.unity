@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db81272145dc4b07840f9346546aa0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnSpeed: 1.5
   balloons:
   - {fileID: 2216702719370518338, guid: 1eca291f816b24750a5c69b195208979, type: 3}
   - {fileID: 5667979264356887185, guid: 5b3496eac968d427c9553230c153c057, type: 3}
@@ -361,6 +362,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rounds: 3
+  playerPrefCorrect: ShapeGameCorrect
+  playerPrefWrong: ShapeGameWrong
   onStart:
     m_PersistentCalls:
       m_Calls: []
