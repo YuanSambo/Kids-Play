@@ -24,14 +24,16 @@ public class DollDraggable : Draggable
             var containerSize = container.size;
             if (size.Equals(containerSize) && MovementDestination != StartingPosition)
             {
-                GameManager.Instance.CorrectAnswer();
+                
                 container.PlayConfetti();
                 MovementDestination = other.transform.position;
                 GetComponent<BoxCollider2D>().enabled = false;
+                GameManager.Instance.CorrectAnswer();
             }
             else
             {
                 GameManager.Instance.WrongAnswer();
+                print("rawr");
                 MovementDestination = StartingPosition;
             }
         }

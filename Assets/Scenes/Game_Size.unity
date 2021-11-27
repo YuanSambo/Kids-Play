@@ -365,7 +365,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08032787, y: -0.31622183}
+  m_Offset: {x: 0.007772684, y: -0.31622183}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -376,7 +376,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.6037567, y: 3.382326}
+  m_Size: {x: 2.071684, y: 3.382326}
   m_EdgeRadius: 0
 --- !u!4 &492259639
 Transform:
@@ -5509,7 +5509,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.037272215, y: -0.3522005}
+  m_Offset: {x: -0.061457396, y: -0.049886703}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5520,7 +5520,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1445713, y: 2.8585238}
+  m_Size: {x: 1.8059793, y: 2.882709}
   m_EdgeRadius: 0
 --- !u!4 &861843043
 Transform:
@@ -10434,7 +10434,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.058310986, y: -0.12270975}
+  m_Offset: {x: -0.0021517277, y: -0.13480246}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -10445,7 +10445,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5403528, y: 2.2830167}
+  m_Size: {x: 1.4194274, y: 1.9202402}
   m_EdgeRadius: 0
 --- !u!4 &1051945802
 Transform:
@@ -15458,7 +15458,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0690155, y: -0.2828281}
+  m_Offset: {x: -0.03981757, y: -0.2949208}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -15469,7 +15469,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.033554, y: 3.9497094}
+  m_Size: {x: 2.1870751, y: 3.6353033}
   m_EdgeRadius: 0
 --- !u!4 &1220347242
 Transform:

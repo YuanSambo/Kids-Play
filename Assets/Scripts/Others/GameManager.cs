@@ -53,7 +53,6 @@ public  class GameManager : MonoBehaviour
 
     protected void Update()
     {
-        print(Math.Round(Time.time));
         if (_roundCorrect >= rounds)
         {
             RoundWin();
