@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 public class CountingManager : MonoBehaviour
 {
     public static CountingManager Instance;
-    public Number Count;
+    public int Count;
     
     private void Awake()
     {
@@ -22,7 +22,7 @@ public class CountingManager : MonoBehaviour
     }
     public void GenerateRandomNumber()
     {
-        var num = (Number) Random.Range(0, (int)Number.Count);
+        var num = Random.Range(1,20);
         Count = num;
     }
 

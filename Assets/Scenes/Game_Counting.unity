@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086e4a3d90080e44f8877d25c2804cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Count: 0
+  Count: 2
 --- !u!4 &489194824
 Transform:
   m_ObjectHideFlags: 0
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 502695054}
   - component: {fileID: 502695055}
   m_Layer: 5
-  m_Name: Number Panel
+  m_Name: Cloud Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -432,10 +432,10 @@ RectTransform:
   m_Father: {fileID: 311350726}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -101, y: 123}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 95, y: -87}
+  m_SizeDelta: {x: 0, y: 111.619995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &502695054
 MonoBehaviour:
@@ -460,6 +460,16 @@ MonoBehaviour:
   - {fileID: 3120039067288846940, guid: 2bd3b0976746a48439d6e977fdd332b7, type: 3}
   - {fileID: 536647261331593025, guid: aacd4a5d7e2a26d4e94f33b702087290, type: 3}
   - {fileID: 1114991823491550637, guid: 438efc1a122103e459796cd3e7fe8b2b, type: 3}
+  - {fileID: 1114991823491550637, guid: fae27826c08588847b55a7ebc0b1c29f, type: 3}
+  - {fileID: 1114991823491550637, guid: 3e481bca49afb1840adfae0e61281902, type: 3}
+  - {fileID: 1114991823491550637, guid: c6fcc2949a27c934e9adf41ed5abdfe5, type: 3}
+  - {fileID: 1114991823491550637, guid: e9d723b6fefb40745a2babeee1193c8b, type: 3}
+  - {fileID: 1114991823491550637, guid: 56171beba3b778049a8c45ade117d4a9, type: 3}
+  - {fileID: 1114991823491550637, guid: f4832d1a7b213394ca53485adbf29731, type: 3}
+  - {fileID: 1114991823491550637, guid: 82d3ef00946cc024c8bffeb8f2284f01, type: 3}
+  - {fileID: 1114991823491550637, guid: 5d545850f176002498ddaceeb57ca989, type: 3}
+  - {fileID: 1114991823491550637, guid: ec69504c18b637049b680c777af01202, type: 3}
+  - {fileID: 1114991823491550637, guid: 81ec4dced13e4b74797d6f1226097f8a, type: 3}
 --- !u!114 &502695055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,10 +490,10 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 10, y: 0}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_CellSize: {x: 130, y: 65}
+  m_Spacing: {x: 50, y: 0}
+  m_Constraint: 2
+  m_ConstraintCount: 1
 --- !u!1 &504378873
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +528,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -103.69}
+  m_AnchoredPosition: {x: 0, y: -120}
   m_SizeDelta: {x: 0, y: 161.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &504378875
@@ -541,7 +551,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 70, y: 70}
+  m_CellSize: {x: 50, y: 50}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 2

@@ -11,8 +11,8 @@ public class ChickPanel : MonoBehaviour
     {       
         DestroyChicks();
 
-        var count = (int) CountingManager.Instance.Count;
-        for (int i = 0; i < count+1; i++)
+        var count = CountingManager.Instance.Count;
+        for (int i = 0; i < count; i++)
         {
              Instantiate(Chick,Chick.transform.position,Quaternion.identity,transform);
         }
