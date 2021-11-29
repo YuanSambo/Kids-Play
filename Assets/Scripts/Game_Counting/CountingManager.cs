@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 public class CountingManager : MonoBehaviour
 {
     public static CountingManager Instance;
-    public EggCount Count;
+    public Number Count;
     
     private void Awake()
     {
@@ -22,7 +22,7 @@ public class CountingManager : MonoBehaviour
     }
     public void GenerateRandomNumber()
     {
-        var num = (EggCount) Random.Range(0, (int)EggCount.Count);
+        var num = (Number) Random.Range(0, (int)Number.Count);
         Count = num;
     }
 

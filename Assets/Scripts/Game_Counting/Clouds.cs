@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EggCount
+//TODO 
+public enum Number
 {
     One,
     Two,
@@ -14,15 +15,25 @@ public enum EggCount
     Eight,
     Nine,
     Ten,
+    // Eleven,
+    // Twelve,
+    // Thirteen,
+    // Fourteen,
+    // Fifteen,
+    // Sixteen,
+    // Seventeen,
+    // Eighteen,
+    // Nineteen,
+    // Twenty,
     Count,
 }
-public class Eggs : MonoBehaviour
+public class Clouds : MonoBehaviour
 {
-    public EggCount eggCount;
+    public Number number;
 
     public void CheckIfCorrect()
     {
-        if (CountingManager.Instance.Count == eggCount)
+        if (CountingManager.Instance.Count == number)
         {
             GameManager.Instance.CorrectAnswer();
         }
