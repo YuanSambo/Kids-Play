@@ -341,7 +341,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2136563861}
         m_TargetAssemblyTypeName: BoxPanel, Assembly-CSharp
-        m_MethodName: StartSpawnBoxes
+        m_MethodName: FirstRoundSpawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

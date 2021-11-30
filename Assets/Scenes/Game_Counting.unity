@@ -350,6 +350,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 502695054}
+        m_TargetAssemblyTypeName: CloudPanel, Assembly-CSharp
+        m_MethodName: DestroyClouds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onWrongAnswer:
     m_PersistentCalls:
       m_Calls: []
@@ -411,6 +423,7 @@ GameObject:
   - component: {fileID: 502695053}
   - component: {fileID: 502695054}
   - component: {fileID: 502695055}
+  - component: {fileID: 502695056}
   m_Layer: 5
   m_Name: Cloud Panel
   m_TagString: Untagged
@@ -434,7 +447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 95, y: -87}
+  m_AnchoredPosition: {x: 848, y: -101}
   m_SizeDelta: {x: 0, y: 111.619995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &502695054
@@ -490,10 +503,29 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 130, y: 65}
+  m_CellSize: {x: 150, y: 75}
   m_Spacing: {x: 50, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
+--- !u!95 &502695056
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502695052}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf80bf551b34969438ba2f4d204cedde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &504378873
 GameObject:
   m_ObjectHideFlags: 0

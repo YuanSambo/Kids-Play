@@ -26,39 +26,47 @@ public class BoxPanel : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    
-    private IEnumerator SpawnBoxesCoroutine()
-    {
-        while (true)
-        {
-            pairs.Shuffle(10);
-            for (int i = 0; i < 3; i++)
-            {
-                Instantiate(pairs[i].box, BoxSpawnPositions[i].position,Quaternion.identity,transform);
-                yield return new WaitForSeconds(1f);
 
-            }
-
-            yield break;
-        }
-      
-        
-    }
-
-    public void StartSpawnBoxes()
+    private void SpawnBoxes()
     {
         StartCoroutine(SpawnBoxesCoroutine());
+    }
+
+    public void FirstRoundSpawn()
+    {
+        StartCoroutine(FirstRoundSpawnCoroutine());
+    }
+    
+    private IEnumerator FirstRoundSpawnCoroutine()
+    {
+        yield return new WaitForSeconds(3f);
+        StartCoroutine(SpawnBoxesCoroutine());
+
+    }
+
+    private IEnumerator SpawnBoxesCoroutine()
+    {
+        pairs.Shuffle(10);
+        for (int i = 0; i < 3; i++)
+        {
+            Instantiate(pairs[i].box, BoxSpawnPositions[i].position, Quaternion.identity, transform);
+            yield return new WaitForSeconds(1f);
+        }
+
         ToySpawnPositions.Shuffle(20);
         for (int i = 0; i < 3; i++)
         {
             Instantiate(pairs[i].toy, ToySpawnPositions[i].position,
-                Quaternion.identity,transform);
+                Quaternion.identity, transform);
+
         }
     }
+
     public void NewRoundBoxes()
     {
         StartCoroutine(NewRoundBoxesCoroutine());
     }
+
     private IEnumerator NewRoundBoxesCoroutine()
     {
         var boxes = GameObject.FindGameObjectsWithTag("DropValid");
@@ -68,9 +76,7 @@ public class BoxPanel : MonoBehaviour
         {
             Destroy(boxes[i]);
         }
-        StartSpawnBoxes();
-        
-    }
 
-   
+        SpawnBoxes();
+    }
 }
