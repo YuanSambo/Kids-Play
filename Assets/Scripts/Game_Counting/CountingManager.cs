@@ -22,7 +22,7 @@ public class CountingManager : MonoBehaviour
     }
     public void GenerateRandomNumber()
     {
-        var num = Random.Range(1,20);
+        var num = Random.Range(0,20);
         Count = num;
     }
 

@@ -22,11 +22,11 @@ public class BalloonSpawner : MonoBehaviour
 
     private IEnumerator BalloonsCoroutine()
     {
+        yield return new WaitForSeconds(3f);
         while (true)
         {
             if (ctr >= balloons.Count) ctr = 0;
-            var index = Random.Range(0, balloons.Count);
-            var obj = Instantiate(balloons[index], spawnPositions[ctr].position, Quaternion.identity);
+            var obj = Instantiate(balloons[ctr], spawnPositions[ctr].position, Quaternion.identity);
             obj.GetComponent<Rigidbody2D>().velocity = Vector2.up;
             ctr++;
             yield return new WaitForSeconds(spawnSpeed);

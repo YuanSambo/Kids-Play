@@ -3,14 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TouchController : MonoBehaviour
+public class Balloon : MonoBehaviour
 {
     private Vector3 _screenPosition;
     private Vector3 worldPosition;
+    public Shapes shape;
     
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             Vector3 mousePosition = Input.mousePosition;
             _screenPosition = new Vector2(mousePosition.x, mousePosition.y);
@@ -19,13 +20,24 @@ public class TouchController : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
             if (hit.collider != null)
             {
-                Destroy(hit.transform.gameObject);
-
+                if(shape.Equals(ShapeManager.Instance.shape))
+                {
+                    GameManager.Instance.CorrectAnswer();
+                    Destroy(hit.transform.gameObject);
+                }
+                else
+                {
+                    GameManager.Instance.WrongAnswer();
+                }
             }
-
-
-
         }
+
+        if (transform.position.y > 8f)
+        {
+            Destroy(gameObject);
+        }
+        
+        
 
     }
 }
