@@ -31,12 +31,12 @@ public class LevelManager : MonoBehaviour
    {
       SceneManager.LoadScene(4);
    }
-   public void FifthGame()
+   public void FourthGame()
    {
       SceneManager.LoadScene(5);
    }
 
-   public void SixthGame()
+   public void FifthGame()
    {
       SceneManager.LoadScene(6);
    }
