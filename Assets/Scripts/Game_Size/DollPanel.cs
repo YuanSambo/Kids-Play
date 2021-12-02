@@ -7,7 +7,7 @@ using UnityEngine;
 public class DollPanel : MonoBehaviour
 {
     public List<GameObject> Dolls;
-    public int counter = 0;
+    private int counter = 0;
 
 
     private void Awake()
@@ -22,7 +22,15 @@ public class DollPanel : MonoBehaviour
 
     }
 
-
+    public void BeginningSpawn()
+    {
+        StartCoroutine(BeginningSpawnCoroutine());
+    }
+    private IEnumerator BeginningSpawnCoroutine()
+    {
+        yield return new WaitForSeconds(3f);
+        SpawnDoll();
+    }
     public void SpawnDoll()
     {
         if (counter >= 4) return;
@@ -30,6 +38,7 @@ public class DollPanel : MonoBehaviour
         counter++;
     }
 
+    
     public void StartNewRoundDolls()
     {
         StartCoroutine(NewRoundDollsCoroutine());

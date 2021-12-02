@@ -276,7 +276,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2049690529}
         m_TargetAssemblyTypeName: DollPanel, Assembly-CSharp
-        m_MethodName: SpawnDoll
+        m_MethodName: BeginningSpawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20546,7 +20546,6 @@ MonoBehaviour:
   - {fileID: 7632338548556874408, guid: 8970cdb4026085145be6710754796712, type: 3}
   - {fileID: 4732731902825927463, guid: 5e51a8b340e6e09468ce21291ecc5567, type: 3}
   - {fileID: 1330089458036106830, guid: 74be7bd54d0934e41b5a56fc3b7af0d0, type: 3}
-  counter: 0
 --- !u!1001 &2083728415
 PrefabInstance:
   m_ObjectHideFlags: 0

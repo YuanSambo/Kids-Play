@@ -8,13 +8,33 @@ public class CardPanel : MonoBehaviour
    public List<GameObject> cards;
    private int cardCounter = 0;
 
+   
 
-   private void Update()
+   
+   public void NewSpawnCards()
    {
-       if (transform.childCount <= 0 && cardCounter<cards.Count)
+       StartCoroutine(NewCardCoroutine());
+   }
+
+   public void SpawnCards()
+   {
+       StartCoroutine(SpawnCardsCoroutine());
+   }
+
+   private IEnumerator NewCardCoroutine()
+   {
+       yield return new WaitForSeconds(3f);
+       StartCoroutine(SpawnCardsCoroutine());
+   }
+
+   private IEnumerator SpawnCardsCoroutine()
+   {
+       yield return new WaitForSeconds(1f);
+       if (cardCounter >= cards.Count)
        {
-           Instantiate(cards[cardCounter],transform.position, Quaternion.identity,transform);
-           cardCounter++;
+           cardCounter = 0;
        }
+       Instantiate(cards[cardCounter],transform.position, Quaternion.identity,transform);
+       cardCounter++;
    }
 }

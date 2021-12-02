@@ -388,14 +388,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rounds: 3
-  playerPrefCorrect: 
-  playerPrefWrong: 
+  playerPrefCorrect: DifferenceGameCorrect
+  playerPrefWrong: DifferenceGameWrong
   onStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 450001073}
+        m_TargetAssemblyTypeName: CardPanel, Assembly-CSharp
+        m_MethodName: NewSpawnCards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onCorrectAnswer:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 450001073}
+        m_TargetAssemblyTypeName: CardPanel, Assembly-CSharp
+        m_MethodName: SpawnCards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onWrongAnswer:
     m_PersistentCalls:
       m_Calls: []

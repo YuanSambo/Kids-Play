@@ -7,6 +7,7 @@ public class Cards : MonoBehaviour
     
     public void DestroyCards()
     {
+        GameManager.Instance.CorrectAnswer();
         Destroy(gameObject);
     }
 }
