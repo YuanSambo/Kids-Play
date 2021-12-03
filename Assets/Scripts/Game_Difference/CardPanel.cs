@@ -29,7 +29,7 @@ public class CardPanel : MonoBehaviour
 
    private IEnumerator SpawnCardsCoroutine()
    {
-       yield return new WaitForSeconds(1f);
+       yield return new WaitForSeconds(0f);
        if (cardCounter >= cards.Count)
        {
            cardCounter = 0;
