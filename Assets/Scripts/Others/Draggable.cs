@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class Draggable : MonoBehaviour
@@ -16,6 +12,7 @@ public class Draggable : MonoBehaviour
 
     private void Start()
     {
+        LeanTween.scale(gameObject, new Vector3(0.18f, 0.18f, 1), .5f);
         StartingPosition = transform.position;
     }
 
