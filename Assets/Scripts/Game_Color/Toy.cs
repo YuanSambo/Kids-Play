@@ -6,46 +6,49 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
-public enum ObjectColor
+namespace Game_Color
 {
-    Blue,
-    Red,
-    Green,
-    Yellow,
-    Violet,
-    Orange,
-    Count,
-}
-
-public class Toy : Draggable
-{
-    public ObjectColor objectColor;
-
-    protected new void Start()
+    public enum ObjectColor
     {
-        base.Start();
-        LeanTween.scale(gameObject, new Vector3(0f, 0f, 1), 2f).setEasePunch();
+        Blue,
+        Red,
+        Green,
+        Yellow,
+        Violet,
+        Orange,
+        Count,
     }
-    
-    private void OnTriggerEnter2D(Collider2D other)
 
+    public class Toy : Draggable
     {
-        var container = other.gameObject.GetComponent<ColorContainer>();
-        if (container != null)
+        public ObjectColor objectColor;
+
+        protected new void Start()
         {
-            var containerColor = container.objectColor;
-            if (objectColor.Equals(containerColor) && MovementDestination != StartingPosition)
+            base.Start();
+            LeanTween.scale(gameObject, new Vector3(0f, 0f, 1), 2f).setEasePunch();
+        }
+    
+        private void OnTriggerEnter2D(Collider2D other)
+
+        {
+            var container = other.gameObject.GetComponent<ColorContainer>();
+            if (container != null)
             {
-                Destroy(gameObject);
-                GameManager.Instance.CorrectAnswer();
-                container.PlayConfetti();
-            }
-            else
-            {
-                GameManager.Instance.WrongAnswer();
-                MovementDestination = StartingPosition;
+                var containerColor = container.objectColor;
+                if (objectColor.Equals(containerColor) && MovementDestination != StartingPosition)
+                {
+                    Destroy(gameObject);
+                    GameManager.Instance.CorrectAnswer();
+                    container.PlayConfetti();
+                }
+                else
+                {
+                    GameManager.Instance.WrongAnswer();
+                    MovementDestination = StartingPosition;
+                }
             }
         }
-    }
     
+    }
 }

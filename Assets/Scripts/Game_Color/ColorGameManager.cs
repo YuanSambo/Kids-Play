@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class ColorGameManager : GameManager
+namespace Game_Color
 {
+    public class ColorGameManager : GameManager
+    {
    
+    }
 }

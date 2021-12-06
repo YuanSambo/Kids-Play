@@ -1,30 +1,31 @@
-using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
-public class CountingManager : MonoBehaviour
+namespace Game_Counting
 {
-    public static CountingManager Instance;
-    public int Count;
+    public class CountingManager : MonoBehaviour
+    {
+        public static CountingManager Instance;
+        public int Count;
     
-    private void Awake()
-    {
+        private void Awake()
+        {
         
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                Instance = this;
+            }
         }
-        else
+        public void GenerateRandomNumber()
         {
-            Instance = this;
+            var num = Random.Range(1,20);
+            Count = num;
         }
-    }
-    public void GenerateRandomNumber()
-    {
-        var num = Random.Range(1,20);
-        Count = num;
-    }
 
     
+    }
 }

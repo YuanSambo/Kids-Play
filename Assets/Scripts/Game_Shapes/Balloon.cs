@@ -1,43 +1,43 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Balloon : MonoBehaviour
+namespace Game_Shapes
 {
-    private Vector3 _screenPosition;
-    private Vector3 worldPosition;
-    public Shapes shape;
-    
-    private void Update()
+    public class Balloon : MonoBehaviour
     {
-        if (Input.GetMouseButtonDown(0))
+        private Vector3 _screenPosition;
+        private Vector3 worldPosition;
+        public Shapes shape;
+    
+        private void Update()
         {
-            Vector3 mousePosition = Input.mousePosition;
-            _screenPosition = new Vector2(mousePosition.x, mousePosition.y);
-            worldPosition = Camera.main.ScreenToWorldPoint(_screenPosition);
-
-            RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
-            if (hit.collider != null)
+            if (Input.GetMouseButtonDown(0))
             {
-                if(shape.Equals(ShapeManager.Instance.shape))
+                Vector3 mousePosition = Input.mousePosition;
+                _screenPosition = new Vector2(mousePosition.x, mousePosition.y);
+                worldPosition = Camera.main.ScreenToWorldPoint(_screenPosition);
+
+                RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
+                if (hit.collider != null)
                 {
-                    GameManager.Instance.CorrectAnswer();
-                    Destroy(hit.transform.gameObject);
-                }
-                else
-                {
-                    GameManager.Instance.WrongAnswer();
+                    if(shape.Equals(ShapeManager.Instance.shape))
+                    {
+                        GameManager.Instance.CorrectAnswer();
+                        Destroy(hit.transform.gameObject);
+                    }
+                    else
+                    {
+                        GameManager.Instance.WrongAnswer();
+                    }
                 }
             }
-        }
 
-        if (transform.position.y > 8f)
-        {
-            Destroy(gameObject);
-        }
+            if (transform.position.y > 8f)
+            {
+                Destroy(gameObject);
+            }
         
         
 
+        }
     }
 }

@@ -1,22 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-
-public class Clouds : MonoBehaviour
+namespace Game_Counting
 {
-    public int number;
-
-    public void CheckIfCorrect()
+    public class Clouds : MonoBehaviour
     {
-        if (CountingManager.Instance.Count == number)
-        {
-            GameManager.Instance.CorrectAnswer();
-        }
-        else
-        {
-            print("False");
+        public int number;
 
+        public void CheckIfCorrect()
+        {
+            if (CountingManager.Instance.Count == number)
+            {
+                GameManager.Instance.CorrectAnswer();
+            }
+            else
+            {
+                print("False");
+
+            }
         }
     }
 }

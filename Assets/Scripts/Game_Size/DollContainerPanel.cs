@@ -3,22 +3,25 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class DollContainerPanel : MonoBehaviour
+namespace Game_Size
 {
-   public List<GameObject> DollContainers;
-
-
-   public void SpawnDollContainers()
+   public class DollContainerPanel : MonoBehaviour
    {
-      StartCoroutine(SpawnDollContainersCoroutine());
-   }
+      public List<GameObject> DollContainers;
 
-   private IEnumerator SpawnDollContainersCoroutine()
-   {
-      yield return new WaitForSeconds(2f);
-      foreach (var container in DollContainers)
+
+      public void SpawnDollContainers()
       {
-         Instantiate(container, container.transform.position, quaternion.identity, transform);
+         StartCoroutine(SpawnDollContainersCoroutine());
+      }
+
+      private IEnumerator SpawnDollContainersCoroutine()
+      {
+         yield return new WaitForSeconds(2f);
+         foreach (var container in DollContainers)
+         {
+            Instantiate(container, container.transform.position, quaternion.identity, transform);
+         }
       }
    }
 }

@@ -1,26 +1,26 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorContainer : MonoBehaviour
+namespace Game_Color
 {
-   public ObjectColor objectColor;
-   private ParticleSystem _particleSystem;
-
-   private void Awake()
+   public class ColorContainer : MonoBehaviour
    {
-      _particleSystem = GetComponent<ParticleSystem>();
-   }
+      public ObjectColor objectColor;
+      private ParticleSystem _particleSystem;
 
-   private void Start()
-   {
-      LeanTween.scale(gameObject, new Vector3(0.7f, 0.7f, 3), .5f);
+      private void Awake()
+      {
+         _particleSystem = GetComponent<ParticleSystem>();
+      }
 
-   }
+      private void Start()
+      {
+         LeanTween.scale(gameObject, new Vector3(0.7f, 0.7f, 3), .5f);
 
-   public void PlayConfetti()
-   {
-      _particleSystem.Play();
+      }
+
+      public void PlayConfetti()
+      {
+         _particleSystem.Play();
+      }
    }
 }

@@ -3,44 +3,47 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public enum Sizes
+namespace Game_Size
 {
-    First,
-    Second,
-    Third,
-    Fourth,
-    Count,
-}
-public class Doll : Draggable
-{
-    public Sizes size;
-
-    protected new void Start()
+    public enum Sizes
     {
-        base.Start();
-        LeanTween.scale(gameObject, new Vector3(0.24f, 0.22f, 1), 1.5f);
+        First,
+        Second,
+        Third,
+        Fourth,
+        Count,
     }
-   
-    private void OnTriggerEnter2D(Collider2D other)
+    public class Doll : Draggable
     {
-        var container = other.gameObject.GetComponent<DollContainer>();
-        if (container != null)
+        public Sizes size;
+
+        protected new void Start()
         {
-            var containerSize = container.size;
-            if (size.Equals(containerSize) && MovementDestination != StartingPosition)
+            base.Start();
+            LeanTween.scale(gameObject, new Vector3(0.24f, 0.22f, 1), 1.5f);
+        }
+   
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            var container = other.gameObject.GetComponent<DollContainer>();
+            if (container != null)
             {
+                var containerSize = container.size;
+                if (size.Equals(containerSize) && MovementDestination != StartingPosition)
+                {
                 
-                container.PlayConfetti();
-                Destroy(other.gameObject);
-                MovementDestination = other.transform.position;
-                GetComponent<BoxCollider2D>().enabled = false;
-                GameManager.Instance.CorrectAnswer();
-            }
-            else
-            {
-                GameManager.Instance.WrongAnswer();
-                print("rawr");
-                MovementDestination = StartingPosition;
+                    container.PlayConfetti();
+                    Destroy(other.gameObject);
+                    MovementDestination = other.transform.position;
+                    GetComponent<BoxCollider2D>().enabled = false;
+                    GameManager.Instance.CorrectAnswer();
+                }
+                else
+                {
+                    GameManager.Instance.WrongAnswer();
+                    print("rawr");
+                    MovementDestination = StartingPosition;
+                }
             }
         }
     }
