@@ -34,7 +34,7 @@ public class DollPanel : MonoBehaviour
     public void SpawnDoll()
     {
         if (counter >= 4) return;
-        Instantiate(Dolls[counter], Dolls[counter].transform.position, Quaternion.identity, transform);
+        Instantiate(Dolls[counter], transform.position, Quaternion.identity, transform);
         counter++;
     }
 

@@ -1,20 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class DollContainer : MonoBehaviour
 {
     public Sizes size;
     
-    private ParticleSystem _particleSystem;
+    public GameObject confetti;
 
-    private void Awake()
-    {
-        _particleSystem = GetComponent<ParticleSystem>();
-    }
-
+  
     public void PlayConfetti()
     {
-        _particleSystem.Play();
+        Instantiate(confetti, transform.position, quaternion.identity);
     }
 }

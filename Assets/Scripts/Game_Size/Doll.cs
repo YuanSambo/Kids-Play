@@ -11,12 +11,17 @@ public enum Sizes
     Fourth,
     Count,
 }
-public class DollDraggable : Draggable
+public class Doll : Draggable
 {
     public Sizes size;
-    
-    private void OnTriggerEnter2D(Collider2D other)
 
+    protected new void Start()
+    {
+        base.Start();
+        LeanTween.scale(gameObject, new Vector3(0.24f, 0.22f, 1), 1.5f);
+    }
+   
+    private void OnTriggerEnter2D(Collider2D other)
     {
         var container = other.gameObject.GetComponent<DollContainer>();
         if (container != null)
@@ -26,6 +31,7 @@ public class DollDraggable : Draggable
             {
                 
                 container.PlayConfetti();
+                Destroy(other.gameObject);
                 MovementDestination = other.transform.position;
                 GetComponent<BoxCollider2D>().enabled = false;
                 GameManager.Instance.CorrectAnswer();

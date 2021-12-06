@@ -10,9 +10,8 @@ public class Draggable : MonoBehaviour
 
     protected Vector3? MovementDestination;
 
-    private void Start()
+    protected void Start()
     {
-        LeanTween.scale(gameObject, new Vector3(0.18f, 0.18f, 1), .5f);
         StartingPosition = transform.position;
     }
 
