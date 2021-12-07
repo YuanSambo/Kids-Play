@@ -73,7 +73,7 @@ namespace Game_Color
         {
             var boxes = GameObject.FindGameObjectsWithTag("DropValid");
 
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(2f);
             for (int i = 0; i < 3; i++)
             {
                 Destroy(boxes[i]);

@@ -10,9 +10,9 @@ namespace Game_Shapes
     
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
             {
-                Vector3 mousePosition = Input.mousePosition;
+                Vector3 mousePosition = Input.GetTouch(0).position;
                 _screenPosition = new Vector2(mousePosition.x, mousePosition.y);
                 worldPosition = Camera.main.ScreenToWorldPoint(_screenPosition);
 

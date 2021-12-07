@@ -20,7 +20,7 @@ namespace Game_Size
         protected new void Start()
         {
             base.Start();
-            LeanTween.scale(gameObject, new Vector3(0.24f, 0.22f, 1), 1.5f);
+            LeanTween.scale(gameObject, new Vector3(0.24f, 0.22f, 1), 1f);
         }
    
         private void OnTriggerEnter2D(Collider2D other)
@@ -41,7 +41,6 @@ namespace Game_Size
                 else
                 {
                     GameManager.Instance.WrongAnswer();
-                    print("rawr");
                     MovementDestination = StartingPosition;
                 }
             }

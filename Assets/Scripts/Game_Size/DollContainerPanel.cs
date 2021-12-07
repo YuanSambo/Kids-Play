@@ -17,7 +17,7 @@ namespace Game_Size
 
       private IEnumerator SpawnDollContainersCoroutine()
       {
-         yield return new WaitForSeconds(2f);
+         yield return new WaitForSeconds(4f);
          foreach (var container in DollContainers)
          {
             Instantiate(container, container.transform.position, quaternion.identity, transform);

@@ -14,7 +14,8 @@ namespace Game_Counting
             }
             else
             {
-                print("False");
+                GameManager.Instance.WrongAnswer();
+
 
             }
         }

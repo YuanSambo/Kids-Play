@@ -28,7 +28,7 @@ namespace Game_Size
         }
         private IEnumerator BeginningSpawnCoroutine()
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(4f);
             SpawnDoll();
         }
         public void SpawnDoll()

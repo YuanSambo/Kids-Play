@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63eaf85fc12c3b41ab0c88a8916e3ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectColor: 0
+  objectColor: 5
 --- !u!198 &3858886893714829577
 ParticleSystem:
   m_ObjectHideFlags: 0

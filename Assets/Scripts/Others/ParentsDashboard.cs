@@ -10,6 +10,8 @@ public class ParentsDashboard : MonoBehaviour
     public Text MatchColorWrong;
     public Text CountingEggsCorrect;
     public Text CountingEggsWrong;
+    public Text PopTheBalloonCorrect;
+    public Text PopTheBalloonWrong;
     public Text FindTheDifferenceCorrect;
     public Text FindTheDifferenceWrong;
     public Text SizeGameCorrect;
@@ -22,6 +24,8 @@ public class ParentsDashboard : MonoBehaviour
         MatchColorWrong.text = PlayerPrefs.GetInt("ColorGameWrong").ToString();
         CountingEggsCorrect.text = PlayerPrefs.GetInt("CountingEggsCorrect").ToString();
         CountingEggsWrong.text = PlayerPrefs.GetInt("CountingEggsWrong").ToString();
+        PopTheBalloonCorrect.text = PlayerPrefs.GetInt("PopTheBalloonCorrect").ToString();
+        PopTheBalloonWrong.text = PlayerPrefs.GetInt("PopTheBalloonWrong").ToString();
         FindTheDifferenceCorrect.text = PlayerPrefs.GetInt("FindTheDifferenceCorrect").ToString();
         FindTheDifferenceWrong.text = PlayerPrefs.GetInt("FindTheDifferenceWrong").ToString();
         SizeGameCorrect.text = PlayerPrefs.GetInt("SizeGameCorrect").ToString();

@@ -136,4 +136,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDragging: 0
   StartingPosition: {x: 0, y: 0, z: 0}
-  objectColor: 0
+  objectColor: 4
