@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GameTitleUI : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float TitleSize;
     private RectTransform _rectTransform;
     void Start()
     {
         _rectTransform = GetComponent<RectTransform>();
-        LeanTween.scale(gameObject, new Vector3(1.3f,1.3f, 1f), 1f).setOnComplete(Remove);
+        LeanTween.scale(gameObject, new Vector3(TitleSize,TitleSize, 1f), 1f).setOnComplete(Remove);
     }
 
     void Remove()

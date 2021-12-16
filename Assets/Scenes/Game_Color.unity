@@ -1172,6 +1172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Matching Colors Title
       objectReference: {fileID: 0}
+    - target: {fileID: 4381855738664790506, guid: 27f88b2656b277e4084d6cb1e8b5c5aa, type: 3}
+      propertyPath: TitleSize
+      value: 1.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4381855739945894074, guid: 27f88b2656b277e4084d6cb1e8b5c5aa, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

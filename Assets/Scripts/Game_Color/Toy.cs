@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Transactions;
 using UnityEditor;
 using UnityEngine;
@@ -36,7 +37,7 @@ namespace Game_Color
             if (container != null)
             {
                 var containerColor = container.objectColor;
-                if (objectColor.Equals(containerColor) && MovementDestination != StartingPosition)
+                if (objectColor.Equals(containerColor))
                 {
                     Destroy(gameObject);
                     GameManager.Instance.CorrectAnswer();

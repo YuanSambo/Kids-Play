@@ -1206,6 +1206,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7605018609332973775, guid: 42d63a27b6e7a5d4fadf92a9d23123b4, type: 3}
+      propertyPath: TitleSize
+      value: 1.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7605018609332973808, guid: 42d63a27b6e7a5d4fadf92a9d23123b4, type: 3}
       propertyPath: m_Name
       value: Counting Eggs Title
