@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8684760356813677895}
   - component: {fileID: 8684760356813677894}
   m_Layer: 5
-  m_Name: Shape Game Title
+  m_Name: Pop The Balloons Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 220, y: 120}
+  m_SizeDelta: {x: 250, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8684760356813677892
 CanvasRenderer:

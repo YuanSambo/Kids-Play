@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameTitleUI : MonoBehaviour
 {
-    public float TitleSize;
+    private float TitleSize = 1.3f;
     private RectTransform _rectTransform;
     void Start()
     {

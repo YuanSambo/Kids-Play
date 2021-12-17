@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "a29ccec1",
     "m_SelectedPackage": {
-        "deviceId": "a29ccec1",
-        "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 21795,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,109 +11,37 @@
         {
             "deviceId": "a29ccec1",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 7467,
-            "exited": true
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 19237,
-            "exited": true
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 22749,
-            "exited": true
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 13725,
-            "exited": true
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 15566,
-            "exited": true
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 21665,
-            "exited": false
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 6383,
-            "exited": false
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 23513,
-            "exited": false
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 26623,
-            "exited": false
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 24620,
-            "exited": false
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 26719,
-            "exited": false
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 27341,
-            "exited": false
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 21139,
-            "exited": false
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 18901,
-            "exited": false
-        },
-        {
-            "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 20415,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "a29ccec1",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 26769,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "a29ccec1",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 16415,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "a29ccec1",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 21795,
+            "exited": true
+        },
+        {
+            "deviceId": "a29ccec1",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 28473,
+            "exited": true
+        },
+        {
+            "deviceId": "a29ccec1",
+            "name": "com.instagram.android",
+            "processId": 15418,
             "exited": false
         }
     ],
