@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b666b3c36b6c034fa80dbd3614c8a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rounds: 3
+  rounds: 1
   playerPrefCorrect: CountingEggsCorrect
   playerPrefWrong: CountingEggsWrong
   onStart:

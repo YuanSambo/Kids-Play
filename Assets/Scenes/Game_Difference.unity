@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b666b3c36b6c034fa80dbd3614c8a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rounds: 3
+  rounds: 1
   playerPrefCorrect: FindTheDifferenceCorrect
   playerPrefWrong: FindTheDifferenceWrong
   onStart:
@@ -461,8 +461,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -209, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -19.4, y: 1.94}
+  m_SizeDelta: {x: 539.62, y: 230.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &450001072
 MonoBehaviour:
@@ -477,12 +477,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: 80
     m_Right: 0
-    m_Top: 0
+    m_Top: 25
     m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 14.56
+  m_ChildAlignment: 0
+  m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0

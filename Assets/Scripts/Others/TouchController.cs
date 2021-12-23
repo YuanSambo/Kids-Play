@@ -19,10 +19,10 @@ public class TouchController : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
             if (hit.collider != null)
             {
-                var shape = hit.transform.GetComponent<Balloon>().shape;
-                if (shape == ShapeManager.Instance.shape)
+                var balloon = hit.transform.GetComponent<Balloon>();
+                if (balloon.shape == ShapeManager.Instance.shape)
                 {
-
+                    balloon.SpawnConfetti();
                     GameManager.Instance.CorrectAnswer();
                     Destroy(hit.transform.gameObject);
                 }

@@ -1,47 +1,53 @@
 {
     "m_SelectedDeviceId": "a29ccec1",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "a29ccec1",
+        "name": "com.VectorGameStudio.KidsPlay",
+        "processId": 8159,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 20415,
+            "name": "com.VectorGameStudio.KidsPlay",
+            "processId": 15675,
             "exited": true
         },
         {
             "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 26769,
+            "name": "com.VectorGameStudio.KidsPlay",
+            "processId": 18281,
             "exited": true
         },
         {
             "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 16415,
+            "name": "com.VectorGameStudio.KidsPlay",
+            "processId": 19083,
             "exited": true
         },
         {
             "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 21795,
+            "name": "com.VectorGameStudio.KidsPlay",
+            "processId": 20112,
             "exited": true
         },
         {
             "deviceId": "a29ccec1",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 28473,
+            "name": "com.VectorGameStudio.KidsPlay",
+            "processId": 14343,
             "exited": true
         },
         {
             "deviceId": "a29ccec1",
-            "name": "com.instagram.android",
-            "processId": 15418,
+            "name": "com.miui.home",
+            "processId": 6499,
+            "exited": false
+        },
+        {
+            "deviceId": "a29ccec1",
+            "name": "com.VectorGameStudio.KidsPlay",
+            "processId": 8159,
             "exited": false
         }
     ],

@@ -13,6 +13,7 @@ public class DragController : MonoBehaviour
     private void Awake()
     {
         _camera = Camera.main;
+        Input.multiTouchEnabled = false;
     }
 
     private void Update()

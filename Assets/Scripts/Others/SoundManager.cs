@@ -22,29 +22,34 @@ public class SoundManager : MonoBehaviour
             sound.Source.pitch = sound.Pitch;
             sound.Source.loop = sound.Loop;
         }
-
         
     }
 
     private void Start()
     {
-        Instance.Play("StartBackground");
+        Instance.PlayBackground("StartBackground");
     }
 
-    public void Play(string name)
+    public void PlayBackground(string name)
     {
        StopAll();
        var sound = Array.Find(Sounds,sounds => sounds.Name == name);
         sound?.Source.Play();
     }
     
-    public void Stop(string name)
+    public void Play(string name)
     {
         var sound = Array.Find(Sounds,sounds => sounds.Name == name);
-        sound?.Source.Stop();
+        sound?.Source.Play();
+    }
+    
+    public void PlayWithDelay(string name,float delay)
+    {
+        var sound = Array.Find(Sounds,sounds => sounds.Name == name);
+        sound?.Source.PlayDelayed(delay);
     }
 
-    public void StopAll()
+    private void StopAll()
     {
         foreach (var sound in Sounds)
         {

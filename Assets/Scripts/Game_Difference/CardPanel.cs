@@ -24,18 +24,18 @@ namespace Game_Difference
 
         private IEnumerator NewCardCoroutine()
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2f);
             StartCoroutine(SpawnCardsCoroutine());
         }
 
         private IEnumerator SpawnCardsCoroutine()
         {
-            yield return new WaitForSeconds(0f);
+            yield return new WaitForSeconds(2f);
             if (cardCounter >= cards.Count)
             {
                 cardCounter = 0;
             }
-            Instantiate(cards[cardCounter],transform.position, Quaternion.identity,transform);
+            Instantiate(cards[cardCounter],cards[cardCounter].transform.position, Quaternion.identity,transform);
             cardCounter++;
         }
     }

@@ -256,31 +256,31 @@ MonoBehaviour:
   Sounds:
   - Name: StartBackground
     Clip: {fileID: 8300000, guid: 46718ea70745b9b469f644fffb11f3ac, type: 3}
-    Volume: 0.1
+    Volume: 0.2
     Pitch: 1
     Loop: 1
     Source: {fileID: 0}
   - Name: MatchingColorBackground
     Clip: {fileID: 8300000, guid: b5c1fa3211eb0a04283e376d3126caf9, type: 3}
-    Volume: 0.5
+    Volume: 0.2
     Pitch: 1
     Loop: 1
     Source: {fileID: 0}
   - Name: CountingEggsBackground
     Clip: {fileID: 8300000, guid: ffb4db614de82804ab81a2bfb77f4d37, type: 3}
-    Volume: 0.5
+    Volume: 0.2
     Pitch: 1
     Loop: 1
     Source: {fileID: 0}
   - Name: PopTheBalloonBackground
     Clip: {fileID: 8300000, guid: 0ec2f95d8d9fd364d93dc7606f1fd2e9, type: 3}
-    Volume: 0.5
+    Volume: 0.2
     Pitch: 1
     Loop: 1
     Source: {fileID: 0}
   - Name: FindTheDifferenceBackground
     Clip: {fileID: 8300000, guid: f4bb5b417a292544489bf060308aaff3, type: 3}
-    Volume: 0.5
+    Volume: 0.2
     Pitch: 1
     Loop: 1
     Source: {fileID: 0}
@@ -289,6 +289,90 @@ MonoBehaviour:
     Volume: 0.5
     Pitch: 1
     Loop: 1
+    Source: {fileID: 0}
+  - Name: MatchingColorTitle
+    Clip: {fileID: 8300000, guid: 5ecb34eeabb0d65419491d2cffa0cf05, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: CountingEggsTitle
+    Clip: {fileID: 8300000, guid: eac034a1030d81647915adb23f7b0259, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: FindTheDifferenceTitle
+    Clip: {fileID: 8300000, guid: f20e0de2844fdbe4eb6f8045a9e5c0f9, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: PopTheBalloonsTitle
+    Clip: {fileID: 8300000, guid: c4e7f8f107bdb9842b73dab110a191f0, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: ArrangingDollsTitle
+    Clip: {fileID: 8300000, guid: 3961b9470ecf2c042864d6ff558b7034, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: ButtonSound
+    Clip: {fileID: 8300000, guid: 5577f20c2e9c0b444b0ed430acde69c3, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: GreatJob
+    Clip: {fileID: 8300000, guid: 999870012a59d2741856dc095911dc8c, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: PopCircle
+    Clip: {fileID: 8300000, guid: 3540b20822ba0974e8fae8c7d17261d5, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: PopTriangle
+    Clip: {fileID: 8300000, guid: 03ab69d85142a11478c6be295f38dec8, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: PopDiamond
+    Clip: {fileID: 8300000, guid: d04ef3dbc39a2fb4c86da7014159f462, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: PopStar
+    Clip: {fileID: 8300000, guid: 25fcf066784da6f43a352441a75df366, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: PopSquare
+    Clip: {fileID: 8300000, guid: acacbafb8d49c824693666c7e6a96174, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: PopHeart
+    Clip: {fileID: 8300000, guid: 1dc2e192d174a8c46ae81f3049d49199, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Sparkle
+    Clip: {fileID: 8300000, guid: 3a97331efc7169d4ca03e30ecbd1aeee, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
     Source: {fileID: 0}
 --- !u!4 &504272463
 Transform:
@@ -399,8 +483,9 @@ GameObject:
   - component: {fileID: 1103065015}
   - component: {fileID: 1103065014}
   - component: {fileID: 1103065013}
+  - component: {fileID: 1103065016}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Play Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,6 +566,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1103065016}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ButtonSound
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1103065014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,6 +616,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103065011}
   m_CullTransparentMesh: 1
+--- !u!82 &1103065016
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103065011}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5577f20c2e9c0b444b0ed430acde69c3, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1146877222
 GameObject:
   m_ObjectHideFlags: 0

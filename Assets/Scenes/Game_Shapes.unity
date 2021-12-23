@@ -363,15 +363,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b666b3c36b6c034fa80dbd3614c8a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rounds: 3
+  rounds: 1
   playerPrefCorrect: PopTheBalloonCorrect
   playerPrefWrong: PopTheBalloonWrong
   onStart:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1928850949}
-        m_TargetAssemblyTypeName: ShapeManager, Assembly-CSharp
-        m_MethodName: GenerateRandomShape
+        m_TargetAssemblyTypeName: Game_Shapes.ShapeManager, Assembly-CSharp
+        m_MethodName: StartGenerate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -386,7 +386,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1928850949}
         m_TargetAssemblyTypeName: Game_Shapes.ShapeManager, Assembly-CSharp
-        m_MethodName: GenerateRandomShape
+        m_MethodName: StartGenerate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

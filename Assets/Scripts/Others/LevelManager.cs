@@ -6,7 +6,7 @@ public class LevelManager : MonoBehaviour
    public void MainMenu()
    {
       SceneManager.LoadScene(1);
-      SoundManager.Instance.Play("StartBackground");
+      SoundManager.Instance.PlayBackground("StartBackground");
       
    }
    
@@ -27,34 +27,45 @@ public class LevelManager : MonoBehaviour
    public void FirstGame()
    {
       SceneManager.LoadScene(2);
-      SoundManager.Instance.Play("MatchingColorBackground");
+      SoundManager.Instance.PlayBackground("MatchingColorBackground");
+      SoundManager.Instance.PlayWithDelay("MatchingColorTitle",1.5f);
+
 
    }
 
    public void SecondGame()
    {
       SceneManager.LoadScene(3);
-      SoundManager.Instance.Play("CountingEggsBackground");
+      SoundManager.Instance.PlayBackground("CountingEggsBackground");
+      SoundManager.Instance.PlayWithDelay("CountingEggsTitle",1.5f);
+
 
    }
 
    public void ThirdGame()
    {
       SceneManager.LoadScene(4);
-      SoundManager.Instance.Play("PopTheBalloonBackground");
+      SoundManager.Instance.PlayBackground("PopTheBalloonBackground");
+      SoundManager.Instance.PlayWithDelay("PopTheBalloonsTitle",1.5f);
+
 
    }
    public void FourthGame()
    {
       SceneManager.LoadScene(5);
-      SoundManager.Instance.Play("FindTheDifferenceBackground");
+      SoundManager.Instance.PlayBackground("FindTheDifferenceBackground");
+      SoundManager.Instance.PlayWithDelay("FindTheDifferenceTitle",1.5f);
+
+
 
    }
 
    public void FifthGame()
    {
       SceneManager.LoadScene(6);
-      SoundManager.Instance.Play("ArrangingDollsBackground");
+      SoundManager.Instance.PlayBackground("ArrangingDollsBackground");
+      SoundManager.Instance.PlayWithDelay("ArrangingDollsTitle",1.5f);
+
 
    }
 }

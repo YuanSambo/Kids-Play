@@ -39,18 +39,6 @@ public  class GameManager : MonoBehaviour
     {
         onStart?.Invoke();
     }
-
-    [SerializeField] private UnityEvent onCorrectAnswer;
-
-    public void CorrectAnswer()
-    {
-        _roundCorrect++;
-        PlayerPrefs.SetInt(playerPrefCorrect, ++_allCorrect);
-        onCorrectAnswer?.Invoke();
-    }
-
-    [SerializeField] private UnityEvent onWrongAnswer;
-
     protected void Update()
     {
         if (_roundCorrect >= rounds)
@@ -60,7 +48,20 @@ public  class GameManager : MonoBehaviour
         }
         
     }
+    [SerializeField] private UnityEvent onCorrectAnswer;
 
+    public void CorrectAnswer()
+    {
+        _roundCorrect++;
+        PlayerPrefs.SetInt(playerPrefCorrect, ++_allCorrect);
+        SoundManager.Instance.Play("Sparkle");
+        onCorrectAnswer?.Invoke();
+    }
+
+   
+
+   
+    [SerializeField] private UnityEvent onWrongAnswer;
     public void WrongAnswer()
     {
         PlayerPrefs.SetInt(playerPrefWrong, ++_wrongAnswer);
@@ -72,6 +73,7 @@ public  class GameManager : MonoBehaviour
     private void RoundWin()
     {
         onRoundWin?.Invoke();
+        SoundManager.Instance.PlayWithDelay("GreatJob",0.5f);
         Reset();
     }
 

@@ -1,10 +1,12 @@
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace Game_Difference
 {
     public class Cards : MonoBehaviour
     {
+
     
         public void DestroyCards()
         {
@@ -13,9 +15,11 @@ namespace Game_Difference
 
         private IEnumerator DestroyCardsCoroutine()
         {
-            yield return new WaitForSeconds(1f);
             GameManager.Instance.CorrectAnswer();
+            yield return new WaitForSeconds(2f);
             Destroy(gameObject);
         }
+        
+       
     }
 }
