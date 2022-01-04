@@ -1,28 +1,23 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Others;
 using UnityEngine;
-using UnityEngine.Android;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
-public  class GameManager : MonoBehaviour
+
+
+public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public int rounds = 3;
-    public string playerPrefCorrect;
-    public string playerPrefWrong;
-    private int _gameScore;
-
+ 
     private int _roundCorrect;
-    private int _allCorrect;
-    private int _wrongAnswer;
-
+    private SceneData sceneData;
 
     private void Awake()
     {
-        _allCorrect = PlayerPrefs.GetInt(playerPrefCorrect);
-        _wrongAnswer = PlayerPrefs.GetInt(playerPrefWrong);
-        
+        var sceneName = SceneManager.GetActiveScene().name;
+        sceneData = SceneDataHandler.LoadSceneData(sceneName);
+
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -39,32 +34,33 @@ public  class GameManager : MonoBehaviour
     {
         onStart?.Invoke();
     }
+
     protected void Update()
     {
         if (_roundCorrect >= rounds)
         {
             RoundWin();
-            _gameScore++;
         }
         
+        SceneDataHandler.SaveSceneData(sceneData);
     }
+
     [SerializeField] private UnityEvent onCorrectAnswer;
 
     public void CorrectAnswer()
     {
+        sceneData.correct++;
         _roundCorrect++;
-        PlayerPrefs.SetInt(playerPrefCorrect, ++_allCorrect);
         SoundManager.Instance.Play("Sparkle");
         onCorrectAnswer?.Invoke();
     }
 
-   
 
-   
     [SerializeField] private UnityEvent onWrongAnswer;
+
     public void WrongAnswer()
     {
-        PlayerPrefs.SetInt(playerPrefWrong, ++_wrongAnswer);
+        sceneData.wrong++;
         onWrongAnswer?.Invoke();
     }
 
@@ -73,7 +69,7 @@ public  class GameManager : MonoBehaviour
     private void RoundWin()
     {
         onRoundWin?.Invoke();
-        SoundManager.Instance.PlayWithDelay("GreatJob",0.5f);
+        SoundManager.Instance.PlayWithDelay("GreatJob", 0.5f);
         Reset();
     }
 
