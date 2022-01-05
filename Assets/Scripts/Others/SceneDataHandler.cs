@@ -1,12 +1,23 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 namespace Others
 {
     public class SceneData
     {
-        public string sceneName;
-        public int correct;
-        public int wrong;
+        public string SceneName;
+        public int Correct;
+        public int Wrong;
+        public int Plays = 0;
+        public List<float> PlayTime = new List<float>();
+
+
+        public float GetAveragePlayTime()
+        {
+            float sum = PlayTime.Sum();
+            return sum / Plays;
+        }
     }
 
     public static class SceneDataHandler
@@ -14,7 +25,7 @@ namespace Others
         public static void SaveSceneData(SceneData sceneData)
         {
             string saveJson = JsonUtility.ToJson(sceneData);
-            PlayerPrefs.SetString(sceneData.sceneName,saveJson);
+            PlayerPrefs.SetString(sceneData.SceneName,saveJson);
             PlayerPrefs.Save();
         }
 
@@ -27,7 +38,7 @@ namespace Others
             }
             else
             {
-                return new SceneData(){sceneName = sceneName};
+                return new SceneData(){SceneName = sceneName};
             }
            
         }

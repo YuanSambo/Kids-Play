@@ -6,28 +6,45 @@ public class ParentsDashboard : MonoBehaviour
 {
     public Text MatchColorCorrect;
     public Text MatchColorWrong;
+    public Text MatchColorAverage;
     public Text CountingEggsCorrect;
     public Text CountingEggsWrong;
+    public Text CountingEggsAverage;
     public Text PopTheBalloonCorrect;
     public Text PopTheBalloonWrong;
+    public Text PopTheBalloonAverage;
     public Text FindTheDifferenceCorrect;
     public Text FindTheDifferenceWrong;
+    public Text FindTheDifferenceAverage;
     public Text SizeGameCorrect;
     public Text SizeGameWrong;
+    public Text SizeGameAverage;
+
 
 
     private void Start()
     {
-        MatchColorCorrect.text = SceneDataHandler.LoadSceneData("Game_Color").correct.ToString();
-        MatchColorWrong.text = SceneDataHandler.LoadSceneData("Game_Color").wrong.ToString();
-        CountingEggsCorrect.text = SceneDataHandler.LoadSceneData("Game_Counting").correct.ToString();
-        CountingEggsWrong.text = SceneDataHandler.LoadSceneData("Game_Counting").wrong.ToString();
-        PopTheBalloonCorrect.text = SceneDataHandler.LoadSceneData("Game_Shapes").correct.ToString();
-        PopTheBalloonWrong.text = SceneDataHandler.LoadSceneData("Game_Shapes").wrong.ToString();
-        FindTheDifferenceCorrect.text = SceneDataHandler.LoadSceneData("Game_Difference").correct.ToString();
-        FindTheDifferenceWrong.text = SceneDataHandler.LoadSceneData("Game_Difference").wrong.ToString();
-        SizeGameCorrect.text = SceneDataHandler.LoadSceneData("Game_Size").correct.ToString();
-        SizeGameWrong.text = SceneDataHandler.LoadSceneData("Game_Size").wrong.ToString();
+        MatchColorCorrect.text = SceneDataHandler.LoadSceneData("Game_Color").Correct.ToString();
+        MatchColorWrong.text = SceneDataHandler.LoadSceneData("Game_Color").Wrong.ToString();
+        MatchColorAverage.text = SceneDataHandler.LoadSceneData("Game_Color").GetAveragePlayTime().ToString("F1");
+        
+        CountingEggsCorrect.text = SceneDataHandler.LoadSceneData("Game_Counting").Correct.ToString();
+        CountingEggsWrong.text = SceneDataHandler.LoadSceneData("Game_Counting").Wrong.ToString();
+        CountingEggsAverage.text = SceneDataHandler.LoadSceneData("Game_Counting").GetAveragePlayTime().ToString("F1");
+
+        PopTheBalloonCorrect.text = SceneDataHandler.LoadSceneData("Game_Shapes").Correct.ToString();
+        PopTheBalloonWrong.text = SceneDataHandler.LoadSceneData("Game_Shapes").Wrong.ToString();
+        PopTheBalloonAverage.text = SceneDataHandler.LoadSceneData("Game_Shapes").GetAveragePlayTime().ToString("F1");
+
+        FindTheDifferenceCorrect.text = SceneDataHandler.LoadSceneData("Game_Difference").Correct.ToString();
+        FindTheDifferenceWrong.text = SceneDataHandler.LoadSceneData("Game_Difference").Wrong.ToString();
+        FindTheDifferenceAverage.text = SceneDataHandler.LoadSceneData("Game_Difference").GetAveragePlayTime().ToString("F1");
+
+        
+        SizeGameCorrect.text = SceneDataHandler.LoadSceneData("Game_Size").Correct.ToString();
+        SizeGameWrong.text = SceneDataHandler.LoadSceneData("Game_Size").Wrong.ToString();
+        SizeGameAverage.text = SceneDataHandler.LoadSceneData("Game_Size").GetAveragePlayTime().ToString("F1");
+
 
 
     }

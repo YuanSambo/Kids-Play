@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     {
         var sceneName = SceneManager.GetActiveScene().name;
         sceneData = SceneDataHandler.LoadSceneData(sceneName);
+        sceneData.Plays++;
+        sceneData.PlayTime.Add(0);
 
         if (Instance != null && Instance != this)
         {
@@ -41,7 +43,8 @@ public class GameManager : MonoBehaviour
         {
             RoundWin();
         }
-        
+
+        sceneData.PlayTime[sceneData.Plays-1] = Mathf.Round(Time.timeSinceLevelLoad);
         SceneDataHandler.SaveSceneData(sceneData);
     }
 
@@ -49,7 +52,7 @@ public class GameManager : MonoBehaviour
 
     public void CorrectAnswer()
     {
-        sceneData.correct++;
+        sceneData.Correct++;
         _roundCorrect++;
         SoundManager.Instance.Play("Sparkle");
         onCorrectAnswer?.Invoke();
@@ -60,7 +63,7 @@ public class GameManager : MonoBehaviour
 
     public void WrongAnswer()
     {
-        sceneData.wrong++;
+        sceneData.Wrong++;
         onWrongAnswer?.Invoke();
     }
 
