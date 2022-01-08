@@ -374,6 +374,12 @@ MonoBehaviour:
     Pitch: 1
     Loop: 0
     Source: {fileID: 0}
+  - Name: Yey
+    Clip: {fileID: 8300000, guid: cb75c6a6c46e5f84981b0ea052a52805, type: 3}
+    Volume: 0.5
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
 --- !u!4 &504272463
 Transform:
   m_ObjectHideFlags: 0

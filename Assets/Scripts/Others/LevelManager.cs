@@ -1,8 +1,14 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+   private void Start()
+   {
+      Time.timeScale = 1;
+   }
+
    public void MainMenu()
    {
       SceneManager.LoadScene(1);
