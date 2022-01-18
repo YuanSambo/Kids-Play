@@ -380,6 +380,42 @@ MonoBehaviour:
     Pitch: 1
     Loop: 0
     Source: {fileID: 0}
+  - Name: Blue
+    Clip: {fileID: 8300000, guid: edcf806419af418459e66d1028f2e516, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Green
+    Clip: {fileID: 8300000, guid: 0624dbc5e977f58408d6119f2bb7d499, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Orange
+    Clip: {fileID: 8300000, guid: ae3737ea499ca9d4ab808d930e02b403, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Red
+    Clip: {fileID: 8300000, guid: 1b06684270dce5944b7e8891f04c91b1, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Violet
+    Clip: {fileID: 8300000, guid: c5e4f67256a768544afc730f08564c57, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Yellow
+    Clip: {fileID: 8300000, guid: 0db5c2609402fc84788f3569bb741c77, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
 --- !u!4 &504272463
 Transform:
   m_ObjectHideFlags: 0

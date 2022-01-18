@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "a29ccec1",
         "name": "com.VectorGameStudio.KidsPlay",
-        "processId": 8159,
+        "processId": 23165,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -48,6 +48,12 @@
             "deviceId": "a29ccec1",
             "name": "com.VectorGameStudio.KidsPlay",
             "processId": 8159,
+            "exited": false
+        },
+        {
+            "deviceId": "a29ccec1",
+            "name": "com.VectorGameStudio.KidsPlay",
+            "processId": 23165,
             "exited": false
         }
     ],

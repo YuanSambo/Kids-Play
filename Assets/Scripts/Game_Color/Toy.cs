@@ -39,6 +39,7 @@ namespace Game_Color
                 var containerColor = container.objectColor;
                 if (objectColor.Equals(containerColor))
                 {
+                    SoundManager.Instance.Play(objectColor.ToString());
                     Destroy(gameObject);
                     GameManager.Instance.CorrectAnswer();
                     container.PlayConfetti();
