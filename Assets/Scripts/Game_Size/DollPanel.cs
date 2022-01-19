@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,11 @@ namespace Game_Size
     public class DollPanel : MonoBehaviour
     {
         public List<GameObject> Dolls;
-        private int counter = 0;
+        public List<GameObject> Dolls2;
+
+        private List<GameObject> currentDolls;
+        private int _counter;
+        private int _roundCounter = 1;
 
 
         private void Awake()
@@ -17,9 +22,10 @@ namespace Game_Size
 
         private void Shuffle()
         {
-            counter = 0;
-            Dolls.Shuffle(10);
-
+            currentDolls = _roundCounter % 2 == 0 ? Dolls : Dolls2;
+            _counter = 0;
+            currentDolls.Shuffle(10);
+            
         }
 
         public void BeginningSpawn()
@@ -33,9 +39,9 @@ namespace Game_Size
         }
         public void SpawnDoll()
         {
-            if (counter >= 4) return;
-            Instantiate(Dolls[counter], transform.position, Quaternion.identity, transform);
-            counter++;
+            if (_counter >= 4) return;
+            Instantiate(currentDolls[_counter], transform.position, Quaternion.identity, transform);
+            _counter++;
         }
 
     
@@ -46,6 +52,7 @@ namespace Game_Size
 
         private IEnumerator NewRoundDollsCoroutine()
         {
+            _roundCounter++;
             yield return new WaitForSeconds(2f);
             DestroyDollsCoroutine();
             Shuffle();

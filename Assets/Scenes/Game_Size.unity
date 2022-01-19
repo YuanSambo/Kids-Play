@@ -1028,6 +1028,11 @@ MonoBehaviour:
   - {fileID: 7632338548556874408, guid: 8970cdb4026085145be6710754796712, type: 3}
   - {fileID: 4732731902825927463, guid: 5e51a8b340e6e09468ce21291ecc5567, type: 3}
   - {fileID: 1330089458036106830, guid: 74be7bd54d0934e41b5a56fc3b7af0d0, type: 3}
+  Dolls2:
+  - {fileID: 2021120099641133946, guid: c5b725ee5f915a84a9d283d0025cc3de, type: 3}
+  - {fileID: 1489157052149259481, guid: f449ec7d541340747a8bf7bd7a7f146d, type: 3}
+  - {fileID: 5959432770102028918, guid: b99b60ccf8a48424890f7a2faff3d1c1, type: 3}
+  - {fileID: 4680020344578519636, guid: 3b8e1af540bd0ef4699a74215338f94f, type: 3}
 --- !u!1001 &2083728415
 PrefabInstance:
   m_ObjectHideFlags: 0
