@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         }
 
 
-        _sceneData.PlayTime[_sceneData.Plays - 1] = Mathf.Round(Time.timeSinceLevelLoad);
+        _sceneData.PlayTime[_sceneData.Plays - 1] = (int)Time.timeSinceLevelLoad;
         SceneDataHandler.SaveSceneData(_sceneData);
     }
 
@@ -80,9 +80,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private UnityEvent onWrongAnswer;
 
-    public void WrongAnswer()
+    public void WrongAnswer(int count = 1)
     {
-        _sceneData.Wrong++;
+        _sceneData.Wrong+=count;
         onWrongAnswer?.Invoke();
     }
 

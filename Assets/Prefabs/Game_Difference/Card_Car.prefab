@@ -211,7 +211,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 3029412667507740648}
         m_TargetAssemblyTypeName: DifferenceButton, Assembly-CSharp
-        m_MethodName: PlayConfetti
+        m_MethodName: CorrectButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -419,7 +419,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2444136509733939487}
         m_TargetAssemblyTypeName: DifferenceButton, Assembly-CSharp
-        m_MethodName: PlayConfetti
+        m_MethodName: CorrectButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

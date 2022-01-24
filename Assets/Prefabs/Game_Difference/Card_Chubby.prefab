@@ -112,8 +112,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.37, y: -36.75}
-  m_SizeDelta: {x: 119.06, y: 23.79}
+  m_AnchoredPosition: {x: -0.7922, y: -42.39556}
+  m_SizeDelta: {x: 121.3846, y: 37.0738}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &674950432451613797
 CanvasRenderer:
@@ -211,7 +211,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 8362220216980522489}
         m_TargetAssemblyTypeName: DifferenceButton, Assembly-CSharp
-        m_MethodName: PlayConfetti
+        m_MethodName: CorrectButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -346,8 +346,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1, y: -36}
-  m_SizeDelta: {x: 119.06, y: 23.79}
+  m_AnchoredPosition: {x: -0.0661, y: -42.1437}
+  m_SizeDelta: {x: 118.7278, y: 36.0775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &674950432948664424
 CanvasRenderer:
@@ -445,7 +445,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 154067438390119966}
         m_TargetAssemblyTypeName: DifferenceButton, Assembly-CSharp
-        m_MethodName: PlayConfetti
+        m_MethodName: CorrectButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

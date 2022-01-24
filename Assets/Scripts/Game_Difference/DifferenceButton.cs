@@ -10,17 +10,26 @@ public class DifferenceButton : MonoBehaviour
     public GameObject confetti;
     private DifferenceButton[] _differenceButtons;
 
-    private void Awake()
-    {
-       _differenceButtons = FindObjectsOfType<DifferenceButton>();
+   
+    public void CorrectButton()
+    {      
+        GameManager.Instance.WrongAnswer(-1);
+        SpawnConfetti();
+        DisableButtons();
     }
 
-    public void PlayConfetti()
+    private void SpawnConfetti()
+    { 
+        Instantiate(confetti, transform.position, quaternion.identity);
+
+    }
+    
+    private void DisableButtons()
     {
+        _differenceButtons = FindObjectsOfType<DifferenceButton>();
         foreach (var button in _differenceButtons)
         {
             button.GetComponent<Button>().interactable = false;
         }
-        Instantiate(confetti, transform.position, quaternion.identity);
     }
 }

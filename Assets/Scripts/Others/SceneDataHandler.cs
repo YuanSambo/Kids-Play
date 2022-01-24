@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -10,13 +11,19 @@ namespace Others
         public int Correct;
         public int Wrong;
         public int Plays = 0;
-        public List<float> PlayTime = new List<float>();
+        public List<int> PlayTime = new List<int>();
 
 
-        public float GetAveragePlayTime()
+        public string GetAveragePlayTime()
         {
-            float sum = PlayTime.Sum();
-            return sum / Plays;
+            var sum = PlayTime.Sum();
+            if (sum <= 0) return "00:00:00";
+            var seconds =   sum/Plays;
+            
+            
+            TimeSpan time = TimeSpan.FromSeconds(seconds);
+            return time.ToString(@"hh\:mm\:ss");
+
         }
     }
 
