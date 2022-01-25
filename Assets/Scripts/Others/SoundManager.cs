@@ -57,5 +57,11 @@ public class SoundManager : MonoBehaviour
         }
     }
     
+    public void Pause(string name)
+    {
+        var sound = Array.Find(Sounds,sounds => sounds.Name == name);
+        sound?.Source.Pause();
+    }
+    
     
 }

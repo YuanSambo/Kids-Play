@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DropValid
   - DropInvalid
+  - DifferenceButton
   layers:
   - Default
   - TransparentFX

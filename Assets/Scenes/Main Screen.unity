@@ -416,6 +416,48 @@ MonoBehaviour:
     Pitch: 1
     Loop: 0
     Source: {fileID: 0}
+  - Name: Invalid
+    Clip: {fileID: 8300000, guid: e2cf86b523c763c42ad20c46375fa054, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Circle
+    Clip: {fileID: 8300000, guid: 4032f6fcb346ed141b5d38601c3c38cb, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Diamond
+    Clip: {fileID: 8300000, guid: 0c3c8899e3cb38646898bff2b36badf4, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Heart
+    Clip: {fileID: 8300000, guid: bdb32329f629bb04394703c36c5a69b8, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Square
+    Clip: {fileID: 8300000, guid: 3120c8edeadcfa141bee18f64c47674c, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Star
+    Clip: {fileID: 8300000, guid: f02b0be9b99ed564f9d0d76aae40e92e, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Triangle
+    Clip: {fileID: 8300000, guid: a5e3f4a3dc2460d44a620ed6e05fa4ba, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
 --- !u!4 &504272463
 Transform:
   m_ObjectHideFlags: 0

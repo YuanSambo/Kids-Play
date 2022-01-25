@@ -28,6 +28,7 @@ public class TouchController : MonoBehaviour
                 }
                 else
                 {
+                    ShapeManager.Instance.PlayShapeSfx(balloon.shape);
                     GameManager.Instance.WrongAnswer();
                 }
             }

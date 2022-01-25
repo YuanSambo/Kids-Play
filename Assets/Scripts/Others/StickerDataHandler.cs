@@ -14,6 +14,9 @@ public class RewardsData
         "Bear",
         "Bunny",
         "Owl",
+        "Cat",
+        "Lion",
+        "Pig",
     };
 
     public List<string> unlockedSticker = new List<string>();

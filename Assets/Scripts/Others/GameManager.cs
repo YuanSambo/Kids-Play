@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
             RoundWin();
         }
 
-        if (_currentRound >= 7)
+        if (_currentRound >= 5)
         {
             ShowReward();
             _currentRound = 0;
@@ -80,10 +80,17 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private UnityEvent onWrongAnswer;
 
-    public void WrongAnswer(int count = 1)
+    public void WrongAnswer(int count = 1,bool playSound = true)
     {
         _sceneData.Wrong+=count;
         onWrongAnswer?.Invoke();
+        
+        if (playSound)
+        {
+            SoundManager.Instance.Play("Invalid");
+        }
+       
+       
     }
 
     [SerializeField] private UnityEvent onRoundWin;

@@ -35,7 +35,7 @@ namespace Game_Shapes
         {
             var tempShape = Random.Range(0,(int)Shapes.Count);
             shape = (Shapes)tempShape;
-
+            
             switch (shape)
             {
                 case Shapes.Circle:
@@ -57,8 +57,33 @@ namespace Game_Shapes
                     SoundManager.Instance.Play("PopStar");
                     break;
             }
+           
         }
 
+        public void PlayShapeSfx(Shapes shape)
+        {
+            switch (shape)
+            {
+                case Shapes.Circle:
+                    SoundManager.Instance.Play("Circle");
+                    break;
+                case Shapes.Diamond:
+                    SoundManager.Instance.Play("Diamond");
+                    break;
+                case Shapes.Heart:
+                    SoundManager.Instance.Play("Heart");
+                    break;
+                case Shapes.Square:
+                    SoundManager.Instance.Play("Square");
+                    break;
+                case Shapes.Triangle:
+                    SoundManager.Instance.Play("Triangle");
+                    break;
+                case Shapes.Star:
+                    SoundManager.Instance.Play("Star");
+                    break;
+            }
+        }
 
         public void StartGenerate()
         {

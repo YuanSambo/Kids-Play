@@ -104,6 +104,12 @@ MonoBehaviour:
     stickerObject: {fileID: 6004675273373670641, guid: 97dcaddb0aab7bb4a9b0d5311cb9f474, type: 3}
   - sticker: Owl
     stickerObject: {fileID: 6004675273373670641, guid: 79e46aa8712cca440a2b4051b74aad8a, type: 3}
+  - sticker: Lion
+    stickerObject: {fileID: 5617914833026593964, guid: b59925f9749a31c4bb2602b8ab311b02, type: 3}
+  - sticker: Pig
+    stickerObject: {fileID: 5494541503831170666, guid: 31f7e099f74666c4a9b83ba988b30562, type: 3}
+  - sticker: Cat
+    stickerObject: {fileID: 1688503514971883333, guid: b56e2336f2e70e14f8481254a13390c2, type: 3}
 --- !u!1 &1710936144528789992
 GameObject:
   m_ObjectHideFlags: 0

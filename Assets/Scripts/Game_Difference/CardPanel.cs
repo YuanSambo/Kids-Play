@@ -14,7 +14,7 @@ namespace Game_Difference
         private RectTransform _rectTransform;
 
         private Camera _cam;
-        private bool _timeOut = false;
+        private bool _timeOut;
 
         private void Awake()
         {
@@ -25,7 +25,6 @@ namespace Game_Difference
 
         private void Update()
         {
-            
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 if (!_timeOut)
@@ -39,14 +38,14 @@ namespace Game_Difference
         {
             var mousePosition = Input.GetTouch(0).position;
             var screenPosition = new Vector2(mousePosition.x, mousePosition.y);
-           var worldPosition = _cam.ScreenToWorldPoint(screenPosition);
+            var worldPosition = _cam.ScreenToWorldPoint(screenPosition);
 
-            if (RectTransformUtility.RectangleContainsScreenPoint(_rectTransform,worldPosition))
+            if (RectTransformUtility.RectangleContainsScreenPoint(_rectTransform, worldPosition))
             {
-                GameManager.Instance.WrongAnswer();
-
+                GameManager.Instance.WrongAnswer(1, false);
             }
         }
+
         public void NewSpawnCards()
         {
             StartCoroutine(NewCardCoroutine());

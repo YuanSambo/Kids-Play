@@ -13,7 +13,7 @@ public class DifferenceButton : MonoBehaviour
    
     public void CorrectButton()
     {      
-        GameManager.Instance.WrongAnswer(-1);
+        GameManager.Instance.WrongAnswer(-1,false);
         SpawnConfetti();
         DisableButtons();
     }
